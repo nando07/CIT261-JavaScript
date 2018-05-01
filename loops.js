@@ -24,8 +24,8 @@ for (; g < 10; g++) {
 
 // Statement 2 can be omitted too, but a "break" must be inside the loop to end the loop.
 console.log('Third Loop - Statement 2 omitted');
-for (var h = 5;;h--) {
-    if(h === 0) {
+for (var h = 5;; h--) {
+    if (h === 0) {
         break;
     }
     console.log(h);
@@ -40,7 +40,11 @@ for (var k = 7; k > 0;) {
 // For/In Loop
 // Loops through properties of an object.
 
-var person = {firstName:"Steve", lastName:"Jobs", age:55}; //Dictionary Object (key:value)
+var person = {
+    firstName: "Steve",
+    lastName: "Jobs",
+    age: 55
+}; //Dictionary Object (key:value)
 
 var text = "";
 var x;
@@ -61,7 +65,7 @@ for (x in person) { // x represents the key i.e firstName, lastName, and age
 // As long as the condition inside () is true, then code block will keep looping.
 console.log('While Loop');
 var j = 0; // initialize variable.
-while(j < 10) {
+while (j < 10) {
     console.log(j);
     j++; // incrementor. This is necessary otherwise loop will never end.
 }
