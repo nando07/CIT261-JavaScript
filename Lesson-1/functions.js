@@ -23,3 +23,19 @@ var numberOfYears = function(fromYear, toYear) { // this is a function expressio
 
 console.log('Using a function expression: ' + numberOfYears(1980, 2020));
 
+// if a variable is declared outside of the function it is considered global
+
+var x = 10;
+function(){
+    console.log(x);
+}
+
+// if a variable is declared without the var keyword inside the function, it is considered global too.
+
+function myName() {
+    var firstname = "Fernando";
+    secondName = "Gomez";
+    console.log(firstname + ' ' + secondName);
+}
+
+console.log(secondName);
