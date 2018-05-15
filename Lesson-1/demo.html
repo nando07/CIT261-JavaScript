@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style type="text/css" media="screen">
+        body {
+            width: 100%;
+            margin: auto;
+            padding: 0px;
+        }
+
+        code {
+            font-size: 120%;
+            color: palegreen;
+        }
+
+
+        pre code {
+            background-color: black;
+            display: block;
+            padding: 20px;
+        }
+
+        #p1::first-letter {
+            font-size: 200%;
+            color: black;
+            line-height: 10px;
+        }
+
+        h1 {
+
+            color: dimgray;
+        }
+
+        h2 {
+
+            text-align: center;
+            position: relative;
+            top: 0.6em;
+            font-size: 1.4705882353em;
+            line-height: 1.2;
+            padding: 1.2em 0em 1.2em;
+            max-width: 21.76em;
+            margin: 0 auto;
+            font-style: italic;
+            color: #666;
+            background: linear-gradient(#fff 52%, #e8e8e8 52%, #fff 53.5%);
+            text-shadow: -0.2em 0 #fff, 0.2em 0 #fff, -0.1em 0 #fff, 0.1em 0 #fff;
+        }
+
+        #header {
+            background-color: blue;
+            background-image: url(http://www.noxidsoft.com/images/profile_banner.jpg);
+            width: 100%;
+            height: 200px;
+        }
+
+        strong {
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        #container {
+            width: 700px;
+            margin: auto;
+        }
+
+        p {
+            font-family: serif;
+            font-size: 18px;
+        }
+
+        li {
+            font-family: serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="container">
+        <h2>LESSON 1</h2>
+
+        <p id="p1">In this lesson, I explore various topics of the JavaScript language. The topics are:</p>
+        <ul>
+            <li>Variables</li>
+            <li>Conditional Statements</li>
+            <li>Functions</li>
+            <li>Parameters</li>
+            <li>Loops</li>
+            <li>Arrays</li>
+            <li>Associative Arrays</li>
+        </ul>
+
+        <h2 id="the_html">Variables</h2>
+        <p>Variables are declared with the <strong>var</strong> keyword: </p>
+
+        <pre><code>var x;
+x = 2;</code></pre>
+
+        <p>A complete declaration in one line:</p>
+        <pre><code>var x = 2;</code></pre>
+
+        <p>Constants are created with the <strong>const</strong> keyword. They are unmodifiable.</p>
+
+        <pre><code>const color = 'red';</code></pre>
+
+        <p>Variables can be strings, numbers, and booleans. These are the "Primitives."</p>
+
+        <pre><code>var ball = "Nike";
+var goals = 10;
+var likesSoccer = true;</code></pre>
+
+        <h2>Conditional Statements</h2>
+
+        <p>The <strong>if</strong> statement is used to execute a block of code if a condition is true.</p>
+
+        <pre><code>var myName = 'Fego';
+var age = 26;
+var isMarried = 'yes';
+var lovesToCode = 'yes';
+
+if (age === 26) {
+    console.log(myName + ' is ' + age);
+}
+</code></pre>
+
+       <p>The <strong>else</strong> keyword is used to execute a block of code if a condition is false:</p>
+
+        <pre><code>if (lovesToCode === 'no') {
+    console.log('I am sorry about that');
+} else {
+    console.log('Way to go ' + myName);
+}
+</code></pre>
+
+         <p>The <strong>else if</strong> keywords  introduce other conditions if the first one is false:</p>
+
+        <pre><code>if (lovesToCode === 'no') {
+    console.log('I am sorry about that');
+
+} else if (isMarried === 'no') {
+    console.log('Are you playing videogames too much?');
+
+} else if (age > 35) {
+    console.log('Are you kidding me?');
+
+} else {
+    console.log('Pheww... you are ok');
+}
+
+</code></pre>
+
+             <p>The <strong>switch</strong> statement provides a way to introduce conditionals. The <strong>break</strong> keyword "breaks" the statement so that other cases are not evaluated unnecessarily:</p>
+
+        <pre><code>switch ('OLA') {
+    case 'HELLO':
+        console.log('This is English');
+        break; // this breaks the switch statement so that
+               // the other cases are not evaluated unnecessarily.
+
+    case 'HOLA': // different cases can share the same code block
+    case 'OLA':
+        console.log('This is Spanish (HOLA) and Portuguese (OLA),
+        they almost sound the same.');
+        break;
+
+    case 'BONJOUR':
+        console.log('This is French');
+        break;
+
+    case 'NAMASTE':
+        console.log('This is Hindi');
+
+    default: // default expression in case the main expression
+             // is not found
+        console.log('Who knows what this is');
+}
+
+</code></pre>
+
+       <h2>Functions</h2>
+       <p>Functions in JavaScript are declared with the <strong>function</strong> keyword and may return values with the <strong>return</strong> statement:</p>
+
+        <pre><code>function calculateNumberOfMonths(fromYear, toYear) {
+
+    var result;
+    result = ((toYear - fromYear) * 12);
+    return result;
+}
+
+</code></pre>
+
+        <p>The result of a function can be assigned to a variable:</p>
+
+        <pre><code>var numberOfMonths = calculateNumberOfMonths(1990, 2018);
+console.log(numberOfMonths);
+
+</code></pre>
+
+   <p>Or not be assigned:</p>
+   <pre><code>console.log('This is the number of months from 1970: '
+   + calculateNumberOfMonths(1970, 2018) + ' months.');
+
+</code></pre>
+
+   <p>Function expressions are meant to produce a value:</p>
+
+   <pre><code>// this is a function expression
+
+var numberOfYears = function(fromYear, toYear) {
+    return toYear - fromYear;
+}
+console.log('Using a function expression: '
++ numberOfYears(1980, 2020));
+
+</code></pre>
+
+   <p>If a variable is declared outside of the function it is considered global and can be accessed by any function:</p>
+
+   <pre><code>var x = 10;
+function(){
+    console.log(x);
+}
+
+</code></pre>
+
+   <p>if a variable is declared without the <strong>var</strong> keyword inside the function, it is considered global too.</p>
+
+   <pre><code>function myName() {
+    var firstname = "Fernando";
+    secondName = "Gomez";
+    console.log(firstname + ' ' + secondName);
+}
+
+console.log(secondName);
+
+</code></pre>
+
+  <h2>Function Parameters</h2>
+
+  <p>Function parameters are the names or characters we see inside the () in a function. These parameters are also called arguments and are passed-by-value meaning that if the function changes the value of the parameter, the orginal value will still be preserved:</p>
+
+  <pre><code>
+function bestYears(x, y, z){ // A function can an unlimited number of
+                             // parameters
+    console.log(x);
+}
+
+</code></pre>
+
+ <h2>Loops</h2>
+ <p> <strong>For</strong> loops provide a way to execute a specific functionality until a condition is met: </p>
+  <pre><code>
+for (var i = 0; i &lt; 5; i++) {
+    console.log(i); // prints all values from 0 to 24
+}
+</code></pre>
+
+    <p>Statement 1 can be omitted. Just make sure that values are initialized before the loop: </p>
+  <pre><code>
+var g = 0;
+for (; g &lt; 10; g++) {
+    console.log(g);
+}
+</code></pre>
+
+   <p>Statement 2 can be omitted too, but a "break" must be inside the loop to end the loop: </p>
+  <pre><code>
+for (var h = 5;; h--) {
+    if (h === 0) {
+        break;
+    }
+    console.log(h);
+}
+</code></pre>
+
+     <p>Statement 3 can be omitted as well:</p>
+  <pre><code>
+for (var k = 7; k &gt; 0;) {
+    console.log(k);
+    k--;
+}
+</code></pre>
+
+   <p><strong>While</strong> loops can provide the same functionality. As long as the condition inside () is true, then code block will keep looping:</p>
+  <pre><code>
+console.log('While Loop');
+var j = 0; // initialize variable.
+while (j &lt 10) {
+    console.log(j);
+    j++; // incrementor. This is necessary
+         // otherwise loop will never end.
+</code></pre>
+
+    <p>The <strong>do/while</strong> loop executes code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+  <pre><code>
+var result = ""
+var b = 0;
+do {
+    console.log('do-while-loop!')
+    b++;
+}
+while (b &lt; 5);
+</code></pre>
+    </div>
+        <script src="arrays.js"></script>
+        <script src="conditionals.js"></script>
+
+</body>
+
+</html>

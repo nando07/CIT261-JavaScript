@@ -22,7 +22,7 @@ if (z === undefined) {
     console.log(z);
 }
 
-// Consonants are created with the const keyword, they are unmodifiable
+// Constants are created with the const keyword, they are unmodifiable
 
 const color = 'red';
  console.log(color);
@@ -31,4 +31,4 @@ const color = 'red';
 
 var likesSoccer = true;
 var ball = "Nike";
-var goals  10;
+var goals = 10;

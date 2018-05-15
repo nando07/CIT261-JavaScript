@@ -3,26 +3,26 @@
 // if Statement is used to execute a block of code if a condition is true
 
 */
-
+console.log('Conditionals (Ex. 1)' + '\n');
 var myName = 'Fego';
-var age = '30';
+var age = 26;
 var isMarried = 'yes';
 var lovesToCode = 'yes';
 
 if (age === 26) {
-    console.log(name + ' is ' + age);
+    console.log(myName + ' is ' + age + '\n' + '\n');
 }
 
 // else is used to execute a block of code if a condition is false
-
+console.log('Conditionals (Ex. 2)' + '\n');
 if (lovesToCode === 'no') {
     console.log('I am sorry about that');
 } else {
-    console.log('Way to go ' + myName);
+    console.log('Way to go ' + myName + '\n' + '\n');
 }
 
 // use else if to introduce other conditions if the first one is false
-
+console.log('Conditionals (Ex. 3)');
 if (lovesToCode === 'no') {
     console.log('I am sorry about that');
 } else if (isMarried === 'no') {
@@ -30,8 +30,10 @@ if (lovesToCode === 'no') {
 } else if (age > 35) {
     console.log('Are you kidding me?');
 } else {
-    console.log('Pheww... you are ok');
+    console.log('Pheww... you are ok' + '\n' + '\n');
 }
+
+
 
 // Switch Statement
 
@@ -46,6 +48,7 @@ if (lovesToCode === 'no') {
         code block
 } */
 
+console.log('Conditionals (Ex. 4)');
 switch ('OLA') {
     case 'HELLO':
         console.log('This is English');
