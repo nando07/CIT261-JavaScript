@@ -307,6 +307,133 @@ do {
 }
 while (b &lt; 5);
 </code></pre>
+
+   <h2>Arrays</h2>
+   <p>Arrays are collections of elements:</p>
+  <pre><code>// this is an array of 3 strings
+var groupMembers = ['Fernando', 'Kent', 'Mike'];
+
+console.log(groupMembers[2]); // will print Mike
+</code></pre>
+
+  <p>This is another way to initialize an array:</p>
+  <pre><code>var cars = new Array('Lambo', 'Mercedez', 'BMW');
+</code></pre>
+
+   <p>you can also overwrite elements:</p>
+  <pre><code>groupMembers[2] = 'Ricky';
+console.log(groupMembers);
+// will print = (3) ["Fernando", "Kent", "Ricky"]
+</code></pre>
+
+     <p>Arrays come with several methods like <strong>push()</strong>:</p>
+  <pre><code>var student = ['Fernando', 'Gomez', 1988, 'red', false];
+
+student.push('lambo');
+// Will add lambo to the end of the array and
+// returns the size of the array.
+console.log(student);
+</code></pre>
+
+  <p> <strong>unshift()</strong>:</p>
+  <pre><code>// adds an elment to the beginning of the array.
+// and returns the size of the array
+
+student.unshift('Sr.');
+
+console.log(student);
+</code></pre>
+
+  <p> <strong>shift()</strong>:</p>
+  <pre><code>// removes first element and returns that element
+
+var elementRemoved;
+
+elementRemoved = student.shift();
+
+console.log(elementRemoved);
+console.log(student);
+</code></pre>
+
+  <p> <strong>pop()</strong>:</p>
+  <pre><code>// removes the last element of array and returns that element
+
+var lastElementRemoved = student.pop();
+console.log(lastElementRemoved);
+</code></pre>
+
+  <p> <strong>lastIndexOf() and indexOf()</strong>:</p>
+  <pre><code>// finds if the array has the element 'blue'
+// otherwise it returns -1. This would also be the last ocurrence.
+
+if (student.lastIndexOf('blue') === -1) {
+    console.log('This guy does not like blue');
+}
+
+// finds if the array has the element 'blue' otherwise
+// it returns -1. This would also be the first ocurrence.
+
+if (student.indexOf('red') === -1) {
+    console.log('This guy does not like blue');
+} else {
+    console.log(student.indexOf('red')); // prints 3
+}
+</code></pre>
+
+  <p> <strong>join()</strong>:</p>
+  <pre><code>// adds all elements of array into a string
+
+var allElements = student.join();
+console.log(allElements);
+</code></pre>
+
+   <p> <strong>reverse()</strong>:</p>
+  <pre><code>// Reverses the array, first is last, last is first
+
+student.reverse();
+console.log(student);
+</code></pre>
+
+  <p> <strong>splice()</strong>:</p>
+  <pre><code>// at index 3 remove it, then add blue and yellow.
+
+student.splice(3, 1, "blue", "yellow");
+console.log(student);
+</code></pre>
+
+  <h2>Associative Arrays</h2>
+
+   <p> An associative array is simply a set of key value pairs:</p>
+  <pre><code>var food = {"fruit": 'grape',"meat":'turkey',"vegetable": 'broccoli'};
+
+console.log(food['fruit']); // prints grape
+</code></pre>
+
+  <p>Associative arrays are also objects:</p>
+  <pre><code>var obj = new Object(); // create an object
+
+// Assign values
+
+obj["insect"] = "lady bug";
+obj["reptile"] = "chameleon";
+obj["bird"] = "Eagle";
+
+for(var i in obj) {
+    console.log(i + "=" + obj[i] + '\n'); // i is the key
+}
+</code></pre>
+
+  <p> Attributes of the object are also keys</p>
+  <pre><code>var obj2 = new Object();
+obj2.insect = "firefly";
+obj2.reptile = "snake";
+obj2.fish = "salmon";
+
+for(var i in obj2) {
+    console.log('\n' + i + " = " + obj2[i] + '\n');
+}
+</code></pre>
+
     </div>
         <script src="arrays.js"></script>
         <script src="conditionals.js"></script>
