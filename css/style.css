@@ -308,6 +308,7 @@ section {
     color: teal;
     border: 2px solid teal;
     background-color: white;
+    width: 40px;
 }
 
 .btn-work-1:hover,
