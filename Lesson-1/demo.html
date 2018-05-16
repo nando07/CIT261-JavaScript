@@ -223,7 +223,7 @@ console.log('Using a function expression: '
    <p>If a variable is declared outside of the function it is considered global and can be accessed by any function:</p>
 
    <pre><code>var x = 10;
-function(){
+function y(){
     console.log(x);
 }
 
@@ -237,7 +237,7 @@ function(){
     console.log(firstname + ' ' + secondName);
 }
 
-console.log(secondName);
+console.log(myName() + secondName);
 
 </code></pre>
 
@@ -250,6 +250,7 @@ function bestYears(x, y, z){ // A function can an unlimited number of
                              // parameters
     console.log(x);
 }
+
 
 </code></pre>
 
@@ -432,12 +433,15 @@ obj2.fish = "salmon";
 for(var i in obj2) {
     console.log('\n' + i + " = " + obj2[i] + '\n');
 }
+
 </code></pre>
 
     </div>
         <script src="arrays.js"></script>
         <script src="conditionals.js"></script>
-
+        <script src="loops.js"></script>
+        <script src="variables.js"></script>
+        <script src="functions.js"></script>
 </body>
 
 </html>

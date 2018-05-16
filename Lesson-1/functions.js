@@ -26,10 +26,11 @@ console.log('Using a function expression: ' + numberOfYears(1980, 2020));
 // if a variable is declared outside of the function it is considered global
 
 var x = 10;
-function(){
+function y(){
     console.log(x);
 }
 
+console.log(y());
 // if a variable is declared without the var keyword inside the function, it is considered global too.
 
 function myName() {
@@ -37,5 +38,5 @@ function myName() {
     secondName = "Gomez";
     console.log(firstname + ' ' + secondName);
 }
-
-console.log(secondName);
+console.log(myName() + secondName);
+//console.log(secondName);
