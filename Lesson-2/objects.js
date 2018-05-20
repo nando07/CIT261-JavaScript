@@ -38,7 +38,7 @@ var student = {
     }
 };
 console.log(student.estimateGraduationDate());
-consoloe.log(student.graduationYear + '\n');
+console.log(student.graduationYear + '\n');
 
 console.log("Snippet #4: " + '\n');
 
