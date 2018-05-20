@@ -42,12 +42,12 @@ console.log(student.graduationYear + '\n');
 
 console.log("Snippet #4: " + '\n');
 
-function student(name, age) {
+function learner(name, age) {
         this.name = name;
         this.age = age;
     };
 
-var myStudent = new student("Fego", 30);
+var myStudent = new learner("Fego", 30);
 console.log(myStudent.name + ' ' + myStudent.age + '\n');
 
 
