@@ -9,7 +9,7 @@ athlete.getAge = function() {
     return this.age;
 };
 console.log(athlete.height);
-console.log(athlete.getAge() + '\n');
+console.log(athlete.getAge() + '\n' + '\n');
 
 console.log("Snippet #2: " + '\n');
 
