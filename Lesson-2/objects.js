@@ -94,4 +94,30 @@ console.log(car2.getCarInfo() + '\n');
 
 console.log("Snippet #7: INHERITANCE" + '\n');
 
+// base class
+var Hobby = function() {
+  this.enjoyable = true;
+};
 
+// prototype method
+Hobby.prototype.display = function() {
+  console.log(this.enjoyable ? 'Keep doing it' : 'Try other things');
+};
+
+// Subclass
+
+var Sport = function(name, enjoyable) {
+  Hobby.call(this); // the call method refers to the Hobby function to make it its parent class.
+
+  this.name = name;
+  this.enjoyable = enjoyable;
+};
+
+Sport.prototype = Object.create(Hobby.prototype); // this line says that I want to inherit from the Hobby function
+Sport.prototype.constructor = Sport; // This sets a constructor for Sport
+
+var sport1 = new Sport('Soccer', true);
+var sport2 = new Sport('Golf', false);
+
+console.log(sport1.display());
+console.log(sport2.display());
