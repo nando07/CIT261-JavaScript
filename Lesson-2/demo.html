@@ -104,7 +104,7 @@
         </ul>
 
         <h2 id="the_html">Object Creation</h2>
-        <p>Objects are created with the <strong>new Object()</strong> keyword. We can also add some properties like age, height, weight,
+        <p>Objects are created with the <strong>new Object()</strong> keyword. We can also add some properties like age, height, and weight. (See Snippet #1 in the console)
           </p>
 
        <p><script src="https://gist.github.com/nando07/5f3b3c9f6877a2fa9ceaca7493101b0f.js"></script></p>
@@ -117,21 +117,22 @@
 
 
         <h3>You can add methods to objects:</h3>
+        <p>(See Snippet #2 in the console)</p>
 
        <p><script src="https://gist.github.com/nando07/a89f79f8400e807c0ea7240f1d03e90d.js"></script></p>
 
 
-        <p>Another intersting thing about methods in objects is that they can use the properties of the object. In this case the <strong>estimateGraduationDate()</strong> function can use the property <strong>enrollomentYear</strong> to return the estimated graduation date. The term <strong>this</strong> refers to the current object (<strong>student</strong>): </p>
+        <p>Another intersting thing about methods in objects is that they can use the properties of the object. In this case the <strong>estimateGraduationDate()</strong> function can use the property <strong>enrollomentYear</strong> to return the estimated graduation date. The term <strong>this</strong> refers to the current object (<strong>student</strong>): (See Snippet #3 in the console)</p>
 
        <p><script src="https://gist.github.com/nando07/5f1166f8d217bd86cd17c6a8152f678f.js"></script></p>
 
 
-         <p>You can also create object properties within object methods. For example if we want to create a <strong>graduationYear</strong> property we could do so like this: </p>
+         <p>You can also create object properties within object methods. For example if we want to create a <strong>graduationYear</strong> property we could do so like this: (See Snippet #4 in the console)</p>
 
        <p><script src="https://gist.github.com/nando07/f94ae71fd9ada34e528e9fa5d6b4625d.js"></script></p>
 
 
-        <p>You can create an object with an user defined function and then access the properties. This is also called the construction function: </p>
+        <p>You can create an object with an user defined function and then access the properties. This is also called the construction function: (See Snippet #5 in the console)</p>
 
 
        <p><script src="https://gist.github.com/nando07/c39a7309db712fafc7c27ee717249fe4.js"></script></p>
@@ -139,15 +140,15 @@
 
         <h2>Inheritance in JavaScript</h2>
 
-        <p>By default, every function has a property called "prototype" that is empty, but you can add methods and properties to it. Just like in other languages you can create classes and objects from the class, in JavaScript you create a constructor just like the last code snippet above. If we don't add any methods to the prototype property then our object would look like the following example. Every instance of the object would have the function getCarInfo() which is redundant.</p>
+        <p>By default, every function has a property called "prototype" that is empty, but you can add methods and properties to it. Just like in other languages you can create classes and objects from the class, in JavaScript you create a constructor just like the last code snippet above. If we don't add any methods to the prototype property then our object would look like the following example. Every instance of the object would have the function getCarInfo() which is redundant. (See Snippet #6 in the console)</p>
 
        <p><script src="https://gist.github.com/nando07/8ec7471a143c902639704a4bd61b318a.js"></script></p>
 
-       <p> Instead, we can just put the function inside the prototype property so that any object trying to utilize the getCarInfo() function can access it from that property. This results in a smaller object showing how objects can inherit from the prototype property of the original function:</p>
+       <p> Instead, we can just put the function inside the prototype property so that any object trying to utilize the getCarInfo() function can access it from that property. This results in a smaller object showing how objects can inherit from the prototype property of the original function: (See Snippet #7 in the console)</p>
 
        <p><script src="https://gist.github.com/nando07/32deac79ab797586120a56031d5a570d.js"></script></p>
 
-       <p>Subclassing in JavaScript can be accomplished with the function prototypes. Here we have a base class and a subclass. We add a method <strong>display</strong> to the base class and we can access it by assigning the Hobby prototype to the Sport prototype like shown on line 20. Because we are setting the prototype in line 20 to an object, we end up losing the constructor so we have to set the constructor back again as shown in line 21.</p>
+       <p>Subclassing in JavaScript can be accomplished with the function prototypes. Here we have a base class and a subclass. We add a method <strong>display</strong> to the base class and we can access it by assigning the Hobby prototype to the Sport prototype like shown on line 20. Because we are setting the prototype in line 20 to an object, we end up losing the constructor so we have to set the constructor back again as shown in line 21. (See Snippet #8 in the console)</p>
 
         <p><script src="https://gist.github.com/nando07/3d107f434266b3b219e34fd9eac64a40.js"></script></p>
 

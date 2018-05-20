@@ -26,7 +26,22 @@ var student = {
 console.log(student.estimateGraduationDate(2015) + '\n');
 
 console.log("Snippet #3: " + '\n');
+
 var student = {
+    firstName: 'Fego',
+    lastName: 'Gomez',
+    major: 'Computer Science',
+    isFullTime: true,
+    birth: 1985,
+    enrollmentYear: 2015,
+    estimateGraduationDate: function() {
+        return this.enrollmentYear + 4;
+    }
+};
+console.log(student.estimateGraduationDate());
+
+console.log("Snippet #4: " + '\n');
+var student2 = {
     firstName: 'Fego',
     lastName: 'Gomez',
     major: 'Computer Science',
@@ -37,10 +52,10 @@ var student = {
         this.graduationYear = this.enrollmentYear + 4;
     }
 };
-console.log(student.estimateGraduationDate());
-console.log(student.graduationYear + '\n');
+console.log(student2.estimateGraduationDate());
+console.log(student2.graduationYear + '\n');
 
-console.log("Snippet #4: " + '\n');
+console.log("Snippet #5: " + '\n');
 
 function learner(name, age) {
         this.name = name;
@@ -51,7 +66,7 @@ var myStudent = new learner("Fego", 30);
 console.log(myStudent.name + ' ' + myStudent.age + '\n');
 
 
-console.log("Snippet #5: INHERITANCE" + '\n');
+console.log("Snippet #6: INHERITANCE" + '\n');
 
 var car = function(make, model, year, color) {
   this.make = make;
@@ -71,7 +86,7 @@ var car2 = new car("Dodge", "Ram", 2006, "White");
 console.log(car1.getCarInfo());
 console.log(car2.getCarInfo() + '\n');
 
-console.log("Snippet #6: INHERITANCE" + '\n');
+console.log("Snippet #7: INHERITANCE" + '\n');
 
 var car = function(make, model, year, color) {
   this.make = make;
@@ -92,7 +107,7 @@ console.log(car1.getCarInfo());
 console.log(car2.getCarInfo() + '\n');
 
 
-console.log("Snippet #7: INHERITANCE" + '\n');
+console.log("Snippet #8: INHERITANCE" + '\n');
 
 // base class
 var Hobby = function() {
