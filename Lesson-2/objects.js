@@ -23,7 +23,7 @@ var student = {
         return enrollmentYear + 4;
     }
 };
-console.log(student.estimateGraduationDate(2015) + '\n');
+console.log(student.estimateGraduationDate(2015) + '\n' + '\n');
 
 console.log("Snippet #3: " + '\n');
 
@@ -38,7 +38,7 @@ var student = {
         return this.enrollmentYear + 4;
     }
 };
-console.log(student.estimateGraduationDate());
+console.log(student.estimateGraduationDate() + '\n' + '\n');
 
 console.log("Snippet #4: " + '\n');
 var student2 = {
@@ -53,7 +53,7 @@ var student2 = {
     }
 };
 console.log(student2.estimateGraduationDate());
-console.log(student2.graduationYear + '\n');
+console.log(student2.graduationYear + '\n' + '\n');
 
 console.log("Snippet #5: " + '\n');
 
@@ -63,7 +63,7 @@ function learner(name, age) {
     };
 
 var myStudent = new learner("Fego", 30);
-console.log(myStudent.name + ' ' + myStudent.age + '\n');
+console.log(myStudent.name + ' ' + myStudent.age + '\n' + '\n');
 
 
 console.log("Snippet #6: INHERITANCE" + '\n');
@@ -84,7 +84,7 @@ var car1 = new car("Toyota", "Camry", 2014, "Barcelona Red");
 var car2 = new car("Dodge", "Ram", 2006, "White");
 
 console.log(car1.getCarInfo());
-console.log(car2.getCarInfo() + '\n');
+console.log(car2.getCarInfo() + '\n' + '\n');
 
 console.log("Snippet #7: INHERITANCE" + '\n');
 
@@ -104,7 +104,7 @@ var car1 = new car("Toyota", "Camry", 2014, "Barcelona Red");
 var car2 = new car("Dodge", "Ram", 2006, "White");
 
 console.log(car1.getCarInfo());
-console.log(car2.getCarInfo() + '\n');
+console.log(car2.getCarInfo() + '\n' + '\n');
 
 
 console.log("Snippet #8: INHERITANCE" + '\n');
