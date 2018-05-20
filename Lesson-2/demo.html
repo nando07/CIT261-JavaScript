@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style type="text/css" media="screen">
+        body {
+            width: 100%;
+            margin: auto;
+            padding: 0px;
+        }
+
+        code {
+            font-size: 120%;
+            color: palegreen;
+        }
+
+
+        pre code {
+            background-color: black;
+            display: block;
+            padding: 20px;
+        }
+
+        #p1::first-letter {
+            font-size: 200%;
+            color: black;
+            line-height: 10px;
+        }
+
+        h1 {
+
+            color: dimgray;
+        }
+
+        h2 {
+
+            text-align: center;
+            position: relative;
+            top: 0.6em;
+            font-size: 1.4705882353em;
+            line-height: 1.2;
+            padding: 1.2em 0em 1.2em;
+            max-width: 21.76em;
+            margin: 0 auto;
+            font-style: italic;
+            color: #666;
+            background: linear-gradient(#fff 52%, #e8e8e8 52%, #fff 53.5%);
+            text-shadow: -0.2em 0 #fff, 0.2em 0 #fff, -0.1em 0 #fff, 0.1em 0 #fff;
+        }
+
+        #header {
+            background-color: blue;
+            background-image: url(http://www.noxidsoft.com/images/profile_banner.jpg);
+            width: 100%;
+            height: 200px;
+        }
+
+        strong {
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        #container {
+            width: 850px;
+            margin: auto;
+        }
+
+        p {
+            font-family: serif;
+            font-size: 18px;
+        }
+
+        li {
+            font-family: serif;
+            font-size: 18px;
+        }
+
+        footer {
+            width: 100%;
+            background-color: whitesmoke;
+            color: black;
+            text-align: center;
+            margin: 30px 0 0 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="container">
+        <h2>LESSON 2</h2>
+
+        <p id="p1">In this lesson, I explore more topics of the JavaScript language. The topics are:</p>
+        <ul>
+            <li>Object Creation</li>
+            <li>Inheritance</li>
+            <li>Properties</li>
+            <li>Methods</li>
+            <li>Instantiation</li>
+        </ul>
+
+        <h2 id="the_html">Object Creation</h2>
+        <p>Objects are created with the <strong>new Object()</strong> keyword. We can also add some properties like age, height, weight,
+          </p>
+
+       <p><script src="https://gist.github.com/nando07/5f3b3c9f6877a2fa9ceaca7493101b0f.js"></script></p>
+
+
+
+        <h3>Using object literal notation:</h3>
+
+        <p><script src="https://gist.github.com/nando07/8f666d65b852864f053d14bc13ba3538.js"></script></p>
+
+
+        <h3>You can add methods to objects:</h3>
+
+       <p><script src="https://gist.github.com/nando07/a89f79f8400e807c0ea7240f1d03e90d.js"></script></p>
+
+
+        <p>Another intersting thing about methods in objects is that they can use the properties of the object. In this case the <strong>estimateGraduationDate()</strong> function can use the property <strong>enrollomentYear</strong> to return the estimated graduation date. The term <strong>this</strong> refers to the current object (<strong>student</strong>): </p>
+
+       <p><script src="https://gist.github.com/nando07/5f1166f8d217bd86cd17c6a8152f678f.js"></script></p>
+
+
+         <p>You can also create object properties within object methods. For example if we want to create a <strong>graduationYear</strong> property we could do so like this: </p>
+
+       <p><script src="https://gist.github.com/nando07/f94ae71fd9ada34e528e9fa5d6b4625d.js"></script></p>
+
+
+        <p>You can create an object with an user defined function and then access the properties. This is also called the construction function: </p>
+
+
+       <p><script src="https://gist.github.com/nando07/c39a7309db712fafc7c27ee717249fe4.js"></script></p>
+
+
+        <h2>Inheritance in JavaScript</h2>
+
+        <p>By default, every function has a property called "prototype" that is empty, but you can add methods and properties to it. Just like in other languages you can create classes and objects from the class, in JavaScript you create a constructor just like the last code snippet above. If we don't add any methods to the prototype property then our object would look like the following example. Every instance of the object would have the function getCarInfo() which is redundant.</p>
+
+       <p><script src="https://gist.github.com/nando07/8ec7471a143c902639704a4bd61b318a.js"></script></p>
+
+       <p> Instead, we can just put the function inside the prototype property so that any object trying to utilize the getCarInfo() function can access it from that property. This results in a smaller object showing how objects can inherit from the prototype property of the original function:</p>
+
+       <p><script src="https://gist.github.com/nando07/32deac79ab797586120a56031d5a570d.js"></script></p>
+
+       <p>Subclassing in JavaScript can be accomplished with the function prototypes. Here we have a base class and a subclass. We add a method <strong>display</strong> to the base class and we can access it by assigning the Hobby prototype to the Sport prototype like shown on line 20. Because we are setting the prototype in line 20 to an object, we end up losing the constructor so we have to set the constructor back again as shown in line 21.</p>
+
+        <p><script src="https://gist.github.com/nando07/3d107f434266b3b219e34fd9eac64a40.js"></script></p>
+
+
+<h2>End of Lesson 2</h2>
+    </div>
+
+
+ <footer>
+  <p>Posted by: Fernando Gomez</p>
+  <p>Contact information: <a href="mailto:gom30000@byui.edu">
+ gom30000@byui.edu</a>.</p>
+</footer>
+
+        <script src="arrays.js"></script>
+        <script src="conditionals.js"></script>
+        <script src="loops.js"></script>
+        <script src="variables.js"></script>
+        <script src="functions.js"></script>
+</body>
+
+</html>
