@@ -1,4 +1,4 @@
-var host = 'http://api.giphy.com';
+var host = 'https://api.giphy.com';
 var path = '/v1/gifs/search?';
 var apiKey = '&api_key=E2al1ELsgPz3UxvXlJ3mdMsBVcFRezZm';
 var searchTerm = '';
