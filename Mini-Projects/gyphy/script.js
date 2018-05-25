@@ -18,6 +18,7 @@ function getData(btn) {
     if (localStorage.getItem(searchTerm) === null) {
 
         var url = host + path + apiKey + completeSearchTerm;
+        console.log(url);
         var gifList = [];
         var xhttp = new XMLHttpRequest();
         xhttp.open('GET', url);
