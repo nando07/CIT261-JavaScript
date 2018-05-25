@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gif TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="first">
+        <div>
+            <h1>Gif TV</h1>
+        </div>
+        <div id="second">
+            <img src="img/tv.png">
+            <div id="bg">
+                <img id="gif" src="img/rb.jpeg">
+            </div>
+
+        </div>
+        <div id="btns">
+
+            <button class="btn" id="up" onclick="getData('up')">
+            <i class="fa fa-caret-up fa-4x"></i>
+            </button>
+
+            <p id="search">
+                <label>Channel:</label>
+                <input type="text" id="userInput" oninput="getUserInput()">
+            </p>
+            <button class="btn" id="down" onclick="getData('down')">
+            <i class="fa fa-caret-down fa-4x"></i>
+            </button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
