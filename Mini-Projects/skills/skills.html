@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <!-- css stylesheets -->
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+<!--    <div id="preloader">-->
+<!--         add white space with &nbsp; -->
+<!--        <div id="status">&nbsp;</div>-->
+<!--    </div>-->
+    <!-- Home Page -->
+    <section id="home">
+        <!-- Background Video -->
+        <video id="background-video" poster="video/space.jpg" autoplay loop muted>
+            <source src="video/space.mp4" type="video/mp4">
+            <source src="video/space.ogg" type="video/ogg">
+            <source src="video/space.webm" type="video/webm">
+        </video>
+
+        <div id="home-content">
+            <div id="home-inner">
+                <div id="home-heading">
+                    <h1 id="home-heading-first">Fernando Gomez</h1><br>
+                    <h1 id="home-heading-second">iOS <span id="engineer">Engineer</span></h1>
+                </div>
+
+                <div id="home-text">
+                    <p>Designer + Developer + Creative</p>
+                </div>
+
+                <div id="home-button">
+                    <a class="skills-btn" href="#" onclick="resetCanvas()" title="Check my Skills" role="button">Check my Skills</a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- My Skills -->
+
+    <section id="skills">
+
+       <br><br>
+
+       <div id="cSkills">
+       <h1 style="text-align: center; color: black; font-size: 40px; font-family:fantasy">My Skills</h1>
+       <canvas id="canvasText" width="1200" height="700"></canvas>
+       <canvas id="canvasSkills" width="1200" height="700">
+       </canvas>
+       </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
