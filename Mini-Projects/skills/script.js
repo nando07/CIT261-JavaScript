@@ -55,7 +55,7 @@ const audioArray = ["audio/theNights.mp3", "audio/Extreme_Ways.mp3", "audio/onTo
 function switchAudio() {
 
     if (audioCounter == 3) {
-        counter = 0;
+        audioCounter = 0;
     }
     var bgAudio = document.getElementById("home");
 
