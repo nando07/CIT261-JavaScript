@@ -15,7 +15,7 @@ function fadeOut(target) {
             clearInterval(fadeEffect);
             document.body.removeChild(target);
         }
-    }, 1000);
+    }, 200);
 
 }
 
