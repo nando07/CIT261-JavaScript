@@ -38,6 +38,7 @@ function switchVideo() {
     video.src = vidArray[counter];
     video.setAttribute("type", "video/mp4");
     video.setAttribute("muted", "muted");
+    video.setAttribute("poster", "video/space.jpg");
     video.controls = false;
     video.autoplay = true;
     //    video.setAttribute("poster","video/space.jpg");
