@@ -19,18 +19,21 @@
 <body>
 
     <!-- Preloader -->
-<!--    <div id="preloader">-->
+    <div id="preloader">
 <!--         add white space with &nbsp; -->
-<!--        <div id="status">&nbsp;</div>-->
-<!--    </div>-->
+        <div id="status">&nbsp;</div>
+    </div>
     <!-- Home Page -->
     <section id="home">
         <!-- Background Video -->
-        <video id="background-video" poster="video/space.jpg" autoplay loop muted>
-            <source src="video/space.mp4" type="video/mp4">
+        <video id="background-video" src="video/space.mp4" type="video/mp4" poster="video/space.jpg" autoplay ="autoplay" loop="loop" muted="muted">
+<!--            <source src="video/space.mp4" type="video/mp4">-->
+<!--
             <source src="video/space.ogg" type="video/ogg">
             <source src="video/space.webm" type="video/webm">
+-->
         </video>
+        <audio src="audio/onTopOfTheWorld.mp3" type="audio/mpeg" autoplay></audio>
 
         <div id="home-content">
             <div id="home-inner">
@@ -44,7 +47,23 @@
                 </div>
 
                 <div id="home-button">
-                    <a class="skills-btn" href="#" onclick="resetCanvas()" title="Check my Skills" role="button">Check my Skills</a>
+                   <button class="skills-btn" onclick="resetCanvas()">See My Skills</button>
+
+<!--                    <a class="skills-btn" href="#" onclick="resetCanvas()" title="Check my Skills" role="button">Check my Skills</a>-->
+                </div>
+
+                <div id="media-button">
+                 <img src="img/No-audio.png" onclick="muteTrack()" style="background: white; border-radius: 60px; width: 50px">
+
+                  <img src="img/music.png"  onclick="switchAudio()" style="background: white; border-radius: 60px; width: 50px">
+
+                  <img src="img/videoImg.png" onclick="switchVideo()" style="background: white; border-radius: 30px; width: 50px">
+<!--
+                   <button class="media-btn" onclick="resetCanvas()">Switch Track</button>
+                   <button class="media-btn" onclick="resetCanvas()">Switch Video</button>
+-->
+
+<!--                    <a class="skills-btn" href="#" onclick="resetCanvas()" title="Check my Skills" role="button">Check my Skills</a>-->
                 </div>
 
             </div>
@@ -60,8 +79,10 @@
        <br><br>
        <div id="cSkills">
        <h1 style="text-align: center; color: black; font-size: 40px; font-family:fantasy">My Skills</h1>
-       <canvas id="canvasSkills" width="1200" height="700"></canvas>
+
+       <canvas id="canvasSkills" width="1200" height="800"></canvas>
        </div>
+
     </section>
 
     <script src="script.js"></script>

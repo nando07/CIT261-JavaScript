@@ -1,6 +1,103 @@
+
+var target = document.getElementById("preloader");
+var bodyTarget = document.body;
+function fadeOut(target) {
+
+    var fadeEffect = setInterval(function () {
+        if (!target.style.opacity) {
+            target.style.opacity = 1;
+
+        }
+        if (target.style.opacity > 0) {
+            target.style.opacity -= 0.1;
+
+        } else {
+            clearInterval(fadeEffect);
+         document.body.removeChild(target);
+        }
+    }, 100);
+
+}
+
+fadeOut(target);
+//fadeOut();
+ var vidArray = ["video/stars2.mp4", "video/coding.mp4", "video/space.mp4"];
+var counter = 0;
+
+function switchVideo() {
+
+    if (counter == 3)
+        {
+            counter = 0;
+        }
+    var bgVideo = document.getElementById("home");
+
+    bgVideo.removeChild(bgVideo.childNodes[3]);
+
+    var video = document.createElement('video');
+    video.id = 'background-video';
+    video.src = vidArray[counter];
+    video.setAttribute("type","video/mp4");
+    video.setAttribute("muted","muted");
+    video.controls = false;
+    video.autoplay = true;
+//    video.setAttribute("poster","video/space.jpg");
+    video.loop = true;
+
+
+
+  bgVideo.insertBefore(video, bgVideo.childNodes[3]);
+    counter++;
+//
+}
+var audioCounter = 0;
+const audioArray = ["audio/theNights.mp3", "audio/Extreme_Ways.mp3", "audio/onTopOfTheWorld.mp3"];
+
+function switchAudio() {
+
+    if (audioCounter == 3)
+        {
+            counter = 0;
+        }
+    var bgAudio = document.getElementById("home");
+
+    bgAudio.removeChild(bgAudio.childNodes[5]);
+
+    var audio = document.createElement('audio');
+//    video.id = 'background-video';
+    audio.src = audioArray[audioCounter];
+    audio.setAttribute("type", "audio/mpeg");
+    audio.autoplay = true;
+//    video.setAttribute("poster","video/space.jpg");
+    audio.loop = true;
+
+
+
+  bgAudio.insertBefore(audio, bgAudio.childNodes[5]);
+    audioCounter++;
+//
+}
+
+var playTrack = true;
+
+function muteTrack() {
+
+   var bgAudio = document.getElementById("home");
+var audioTag = bgAudio.childNodes[5];
+
+    if (playTrack == true) {
+       audioTag.pause();
+        playTrack = false;
+    }
+    else {
+        audioTag.play();
+        playTrack = true;
+
+    }
+
+}
+
 var canvas = document.getElementById('canvasSkills');
-
-
 
 var ctxt = canvas.getContext('2d');
 
@@ -21,13 +118,14 @@ function growPercentage(name, nameX, nameY, pX, initialY, finalY, dy, iP, fP, dp
     this.drawPercentage = function () {
         //    ctxt.strokeStyle = 'gray';
         ctxt.fillStyle = 'gray';
-        ctxt.font = "22px Consolas";
+        ctxt.font = "30px Consolas";
         ctxt.fillText(Math.round(this.iP) + "%", this.pX, this.initialY);
     }
 
     this.drawSkillText = function () {
+
         ctxt.fillStyle = 'gray';
-        ctxt.font = "22px Consolas";
+        ctxt.font = "30px Consolas";
         ctxt.fillText(this.name, this.nameX, this.nameY);
     }
 
@@ -40,8 +138,10 @@ function growPercentage(name, nameX, nameY, pX, initialY, finalY, dy, iP, fP, dp
         if (this.initialY > this.finalY) {
             this.initialY -= this.dy;
         }
+
         this.drawPercentage();
         this.drawSkillText();
+
     }
 
 }
@@ -64,6 +164,7 @@ function graphBar(x, y, w, h, dy, g) {
     this.g = g;
 
     this.drawBar = function () {
+
         ctxt.fillStyle = 'rgba(0, 214, 214, 0.9)';
         ctxt.fillRect(this.x, this.y, this.w, this.h);
 
@@ -88,6 +189,14 @@ var cssBar = new graphBar(1000, 600, 100, 0, 2, 480);
 function animate() {
     requestAnimationFrame(animate);
     ctxt.clearRect(0, 0, innerWidth, innerHeight);
+     swiftT.update();
+    jsT.update();
+    cppT.update();
+    javaT.update();
+    phpT.update();
+    sketchT.update();
+    cssT.update();
+
     swiftBar.grow();
     jsBar.grow();
     cppBar.grow();
@@ -97,28 +206,22 @@ function animate() {
     cssBar.grow();
 
 
-    swiftT.update();
-    jsT.update();
-    cppT.update();
-    javaT.update();
-    phpT.update();
-    sketchT.update();
-    cssT.update();
+
 }
 
 function resetCanvas() {
-    window.scrollBy({
-        top: 1200, // could be negative value
-        left: 0,
-        behavior: 'smooth'
-    });
-    animate();
+var elmnt = document.getElementById("cSkills");
+elmnt.scrollIntoView();
+//window.scrollTo(300, 1000);
 }
 
 function scroll() {
     if (window.pageYOffset > 600) {
-
+        animate();
     }
 }
 
 window.onscroll = scroll;
+
+
+
