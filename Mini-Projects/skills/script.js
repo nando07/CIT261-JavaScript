@@ -82,7 +82,9 @@ function switchAudioImage(isHidden) {
         document.getElementById("noAudioImg").style.display = 'none';
 
         document.getElementById("audioImg").style.display = 'inline-block';
-    } else {
+    }
+
+    if(!isHidden) {
         document.getElementById("noAudioImg").style.display = 'inline-block';
 
         document.getElementById("audioImg").style.display = 'none';
