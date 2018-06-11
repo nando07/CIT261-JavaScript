@@ -103,9 +103,11 @@ function muteTrack() {
         switchAudioImage(true);
 
     } else {
+        if (document.getElementById("noAudioImg").style.display == 'none') {
         audioTag.play();
         playTrack = true;
         switchAudioImage(false);
+        }
 
     }
 
