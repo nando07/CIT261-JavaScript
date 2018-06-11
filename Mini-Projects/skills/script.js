@@ -41,10 +41,7 @@ function switchVideo() {
     video.setAttribute("poster", "video/space.jpg");
     video.controls = false;
     video.autoplay = true;
-    //    video.setAttribute("poster","video/space.jpg");
     video.loop = true;
-
-
 
     bgVideo.insertBefore(video, bgVideo.childNodes[3]);
     counter++;
@@ -79,6 +76,19 @@ function switchAudio() {
 
 var playTrack = true;
 
+function switchAudioImage(isHidden) {
+
+    if (isHidden) {
+        document.getElementById("noAudioImg").style.display = 'none';
+
+        document.getElementById("audioImg").style.display = 'inline-block';
+    } else {
+        document.getElementById("noAudioImg").style.display = 'inline-block';
+
+        document.getElementById("audioImg").style.display = 'none';
+    }
+}
+
 function muteTrack() {
 
     var bgAudio = document.getElementById("home");
@@ -87,9 +97,12 @@ function muteTrack() {
     if (playTrack == true) {
         audioTag.pause();
         playTrack = false;
+        switchAudioImage(true);
+
     } else {
         audioTag.play();
         playTrack = true;
+        switchAudioImage(false);
 
     }
 

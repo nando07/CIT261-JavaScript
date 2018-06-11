@@ -181,3 +181,7 @@ background-color: white;
     top: 50%;
     margin-left: -44px;
 }
+
+#audioImg {
+    display: none;
+}
