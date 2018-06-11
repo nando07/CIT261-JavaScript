@@ -164,11 +164,12 @@ section {
 background-color: white;
      background-image: url(/img/loader.gif);
       background-repeat: no-repeat;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+   width: 88px;
+    height: 88px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -44px;
     z-index: 9999;
 }
 
