@@ -64,6 +64,7 @@ function switchAudio() {
     audio.src = audioArray[audioCounter];
     audio.setAttribute("type", "audio/mpeg");
     audio.autoplay = true;
+    audio.controls = false;
     //    video.setAttribute("poster","video/space.jpg");
     audio.loop = true;
 
