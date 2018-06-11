@@ -50,6 +50,8 @@ function switchVideo() {
 var audioCounter = 0;
 const audioArray = ["audio/theNights.mp3", "audio/Extreme_Ways.mp3", "audio/onTopOfTheWorld.mp3"];
 
+var playTrack = true;
+
 function switchAudio() {
 
     if (audioCounter == 3) {
@@ -73,11 +75,13 @@ function switchAudio() {
     bgAudio.insertBefore(audio, bgAudio.childNodes[5]);
     audioCounter++;
     audio.play();
+    playTrack = false;
     muteTrack();
+
     //
 }
 
-var playTrack = true;
+
 
 function switchAudioImage(isHidden) {
 
