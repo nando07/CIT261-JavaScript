@@ -63,7 +63,7 @@ function switchAudio() {
     //    video.id = 'background-video';
     audio.src = audioArray[audioCounter];
     audio.setAttribute("type", "audio/mpeg");
-    audio.autoplay = true;
+//    audio.autoplay = true;
     audio.controls = false;
     //    video.setAttribute("poster","video/space.jpg");
     audio.loop = true;
@@ -72,6 +72,8 @@ function switchAudio() {
 
     bgAudio.insertBefore(audio, bgAudio.childNodes[5]);
     audioCounter++;
+    audio.play();
+    muteTrack();
     //
 }
 
@@ -100,14 +102,12 @@ function muteTrack() {
     if (playTrack == true) {
         audioTag.pause();
         playTrack = false;
-        switchAudioImage(true);
+        switchAudioImage(false);
 
     } else {
         audioTag.play();
         playTrack = true;
-        switchAudioImage(false);
-
-
+        switchAudioImage(true);
     }
 
 }
