@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #topSection {
+            margin: 0;
+        }
+
+        #tools {
+            position: relative;
+           width: 100%;
+            border: 1px solid;
+            margin: 0 auto;
+            height: 1000px;
+            text-align: center;
+
+        }
+
+        #topSection img {
+            width: 100%;
+            height: auto;
+        }
+
+        #ruler {
+             margin: auto;
+
+        }
+/*
+        .rulerA {
+         background: black;
+            height: 3px;
+            width: 10px;
+            transition: width 1s ease-in-out;
+
+        }
+*/
+
+
+        .grow-element {
+            margin: 80px auto;
+            width: 100px;
+            height: 5px;
+            background-color: black;
+        }
+
+
+       @keyframes america {
+    from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(250px) rotate(360deg);
+           }
+}
+
+        @keyframes asgard {
+            from { transform:  translateX(0px)  rotate(0deg);}
+            to { transform:   translateX(-1200px) rotate(-460deg)  ;}
+        }
+
+        .weapons {
+            width: 200px;
+        }
+
+        .hammer {
+            position: absolute;
+            top: 400px;
+            right: 0px;
+            animation: asgard 2s linear infinite;
+            animation-direction: alternate;
+        }
+
+        .shield {
+            position: relative;
+            top: 300px;
+            animation: america 4s linear infinite;
+        }
+
+
+
+        #main-container {
+
+            text-align: center;
+            width: 100%;
+            height: auto;
+
+
+        }
+
+        .container {
+            margin-left: 50px;
+             margin-bottom: 50px;
+            position: relative;
+            display: inline-grid;
+            padding-left: 10px;
+            padding-top: 20px;
+            width: 250px;
+            height: 320px;
+
+
+        }
+
+
+        .cards {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 2px solid whitesmoke;
+            transform-style: preserve-3d;
+            -webkit-transition: all 1s linear;
+            transition: all 1s linear;
+        }
+
+
+        .cards:hover {
+            transform: rotateY(180deg);
+        }
+
+
+        .front {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            backface-visibility: hidden;
+        }
+
+
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            backface-visibility: hidden;
+            background: black;
+            text-align: center;
+            transform: rotateY(180deg);
+        }
+
+        .front h1,
+        .back h1 {
+            font-family: 'Indie Flower', cursive;
+            color: whitesmoke;
+            padding: 30px;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .front p,
+        .back p {
+            font-family: 'zilla slab', sans-serif;
+            color: whitesmoke;
+            padding: 30px;
+            font-weight: normal;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .front img,
+        .back img {
+            font-family: 'zilla slab', sans-serif;
+            padding: 20%;
+            font-weight: normal;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        #hope {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            text-align: center;
+        }
+
+
+        #hopeImg {
+            position: relative;
+            width: 916px;
+            height: auto;
+            margin: 0 auto;
+
+
+        }
+
+
+        #leftSm {
+            position: absolute;
+            left: 130px;
+            top: 0;
+        }
+
+
+        #rSm {
+            position: absolute;
+            right: 135px;
+            top: 0;
+        }
+
+        .hopeBtn {
+         font-family: 'Indie Flower', cursive;
+            font-size: 50px;
+            color: white;
+         text-align: center;
+            border-radius: 20px;
+            background-color: #ef0e20;
+            width: 380px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="home">
+        <div id="topSection">
+            <img src="img/dcwallpaper.jpg">
+        </div>
+    </div>
+
+
+<div class="hidden"></div>
+
+    <h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE SUPERHEROES</h1>
+
+    <div id="main-container">
+
+        <div id="dc">
+
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="front" style="background: #3f7ba3">
+                        <img class="heroImg" src="img/sman.png"></div>
+
+                    <div class="back">
+                        <h1>Superman</h1>
+                        <p>Superman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by writer Jerry Siegel and artist Joe Shuster, high school students living in Cleveland, Ohio, in 1933.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="front" style="background:#3f7ba3">
+                        <img class="heroImg" src="img/flash.png"></div>
+
+                    <div class="back">
+                        <h1>Flash</h1>
+                        <p>The Flash is one of DC Comics' most popular characters and has been integral to the publisher's many reality-changing "crisis" storylines over the years.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="front" style="background: #3f7ba3">
+                        <img class="heroImg" src="img/greenL.png"></div>
+
+                    <div class="back">
+                        <h1>Green Lantern</h1>
+                        <p>The first Green Lantern character, Alan Scott, was created in 1940 by Martin Nodell during the initial popularity of superheroes. Alan Scott usually fought common criminals in New York City with the aid of his magic ring.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="marvel">
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="front" style="background: #ec3c4d">
+                        <img class="heroImg" src="img/strange.png"></div>
+
+                    <div class="back">
+                        <h1>Dr. Strange</h1>
+                        <p>Doctor Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. The character first appeared in Strange Tales #110 (cover-dated July 1963).</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="front" style="background: #ec3c4d">
+                        <img class="heroImg" src="img/wolverine.png"></div>
+
+                    <div class="back">
+                        <h1>Wolverine</h1>
+                        <p>The character appeared in the last panel of The Incredible Hulk #180 before having a larger role in #181 (cover-dated Nov. 1974).</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="front" style="background: #ec3c4d">
+                        <img class="heroImg" src="img/spider.png"></div>
+
+                    <div class="back">
+                        <h1>Spiderman</h1>
+                        <p style="color:whitesmoke">The character was created by writer-editor Stan Lee and writer-artist Steve Ditko, and first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="hope">
+       <h1 style="font-family: 'Indie Flower', cursive; text-align: center">IT MEANS HOPE! </h1>
+        <div id="hopeImg">
+            <img id="leftSm" src="img/smanLeft.jpeg">
+            <img id="middleSm" src="img/sman2.jpg">
+            <img id="rSm" src="img/smanRight.jpeg">
+        </div>
+        <br>
+        <button class="hopeBtn" id="toggle"  onclick="toggle()">Show hope!</button>
+
+    </div>
+<br><br>
+    <div id="tools">
+<h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE WEAPONS</h1>
+        <img class="shield"  src="img/cAShield.png"  width="200">
+        <img class="hammer" src="img/thorHammer.png" width="200">
+
+    </div>
+
+
+    <script>
+
+        function moveLeft(open) {
+            var leftArm = document.getElementById("leftSm");
+
+//            leftArm.style.transition = "left 1s cubic-bezier(0,2,0,0)";
+
+            if (open) {
+                leftArm.style.transition = "left 0.5s cubic-bezier(.01,.96,.93,.07)";
+            leftArm.style.left = "0px";
+
+            } else {
+                leftArm.style.transition = "left 1s ease-out";
+                leftArm.style.left = "130px";
+            }
+        }
+        var e = document.getElementById("toggle");
+        var showingHope = false;
+        function toggle() {
+
+            if (showingHope) {
+            e.innerHTML = "Show hope!";
+                closeChest();
+                showingHope = false
+            } else {
+                e.innerHTML = "Don't show hope";
+                openChest();
+                showingHope = true;
+            }
+
+        }
+
+        function moveRight(open) {
+          var rArm = document.getElementById("rSm");
+
+
+            if (open) {
+                rArm.style.transition = "right 0.5s cubic-bezier(.01,.96,.93,.07)";
+            rArm.style.right = "0px";
+            } else {
+                rArm.style.transition = "right 1s ease-out";
+                rArm.style.right = "130px";
+            }
+        }
+
+        function openChest() {
+            moveRight(true);
+            moveLeft(true);
+        }
+
+        function closeChest() {
+             moveRight(false);
+            moveLeft(false);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
