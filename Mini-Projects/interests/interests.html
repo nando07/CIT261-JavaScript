@@ -52,7 +52,7 @@
 
         @keyframes asgard {
             from { transform:  translateX(0px)  rotate(0deg);}
-            to { transform:   translateX(-1200px) rotate(-460deg)  ;}
+            to { transform:   translateX(-1200px) rotate(-460deg);}
         }
 
         .weapons {
@@ -84,6 +84,7 @@
 
         }
 
+/*
         .container {
             margin-left: 50px;
              margin-bottom: 50px;
@@ -96,8 +97,10 @@
 
 
         }
+*/
 
 
+/*
         .cards {
 
             position: absolute;
@@ -116,7 +119,10 @@
         .cards:hover {
             transform: rotateY(180deg);
         }
+*/
 
+
+/*
 
         .front {
             position: absolute;
@@ -167,6 +173,7 @@
             font-size: 12px;
             text-align: center;
         }
+*/
 
         #hope {
             position: relative;
@@ -213,6 +220,89 @@
         }
 
 
+        /* entire container, keeps perspective */
+.flip-container {
+
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+
+    display: inline-grid;
+	width: 270px;
+	height: 340px;
+}
+
+/* flip speed goes here */
+.flipper {
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+        .front img {
+            padding-top: 70px;
+            padding-left: 55px;
+        }
+/* hide back of pane during swap */
+.front, .back {
+
+/*    text-align: center;*/
+	backface-visibility: hidden;
+    border-radius: 20px;
+     background-color:
+#f3c26a;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+        .front h1, .back h1 {
+            text-align:center;
+            font-family: 'Indie Flower', cursive;
+            padding: 20px;
+        }
+
+        .back p {
+            text-align: justify;
+             padding: 20px;
+        }
+/* front pane, placed above back */
+.front {
+
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+        .back iframe {
+            text-align: center;
+        }
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    color: white;
+    background-color: black;
+}
+        .gif{
+            margin-top: -20px;
+        }
+
+        .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+        #marvel, #dc {
+            text-align: center;
+        }
+
     </style>
 
 </head>
@@ -230,105 +320,105 @@
 
     <h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE SUPERHEROES</h1>
 
-    <div id="main-container">
+    <div id="dc">
 
-        <div id="dc">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+		<img class="heroImg" src="img/sman.png">
+			<!-- front content -->
+		</div>
+		<div class="back">
+		<h1>Superman</h1>
+                       <div class="gif">
+                          <img src="https://media.giphy.com/media/3HSzHiDUtNLhu/giphy.gif" width="110" height="90"></div>
+                        <p>The character was created by writer Jerry Siegel and artist Joe Shuster, high school students living in Cleveland, Ohio, in 1933.</p>
+			<!-- back content -->
+		</div>
+	</div>
+</div>
 
-            <div class="container">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+		<img class="heroImg" src="img/greenL.png">
+			<!-- front content -->
+		</div>
+		<div class="back">
+		<h1>Green Lantern</h1>
+                       <div class="gif">
+                          <img src="https://media.giphy.com/media/ezJpm4iktReaQ/giphy.gif" width="110" height="90"></div>
+                        <p>The first Green Lantern character, Alan Scott, was created in 1940 to fight criminals in New York City with the aid of his magic ring.</p>
+		</div>
+	</div>
+</div>
 
-                <div class="cards">
 
-                    <div class="front" style="background: #3f7ba3">
-                        <img class="heroImg" src="img/sman.png"></div>
 
-                    <div class="back">
-                        <h1>Superman</h1>
-                        <p>Superman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by writer Jerry Siegel and artist Joe Shuster, high school students living in Cleveland, Ohio, in 1933.</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container">
-
-                <div class="cards">
-
-                    <div class="front" style="background:#3f7ba3">
-                        <img class="heroImg" src="img/flash.png"></div>
-
-                    <div class="back">
-                        <h1>Flash</h1>
-                        <p>The Flash is one of DC Comics' most popular characters and has been integral to the publisher's many reality-changing "crisis" storylines over the years.</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container">
-
-                <div class="cards">
-
-                    <div class="front" style="background: #3f7ba3">
-                        <img class="heroImg" src="img/greenL.png"></div>
-
-                    <div class="back">
-                        <h1>Green Lantern</h1>
-                        <p>The first Green Lantern character, Alan Scott, was created in 1940 by Martin Nodell during the initial popularity of superheroes. Alan Scott usually fought common criminals in New York City with the aid of his magic ring.</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div id="marvel">
-            <div class="container">
-
-                <div class="cards">
-
-                    <div class="front" style="background: #ec3c4d">
-                        <img class="heroImg" src="img/strange.png"></div>
-
-                    <div class="back">
-                        <h1>Dr. Strange</h1>
-                        <p>Doctor Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. The character first appeared in Strange Tales #110 (cover-dated July 1963).</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container">
-
-                <div class="cards">
-
-                    <div class="front" style="background: #ec3c4d">
-                        <img class="heroImg" src="img/wolverine.png"></div>
-
-                    <div class="back">
-                        <h1>Wolverine</h1>
-                        <p>The character appeared in the last panel of The Incredible Hulk #180 before having a larger role in #181 (cover-dated Nov. 1974).</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container">
-
-                <div class="cards">
-
-                    <div class="front" style="background: #ec3c4d">
-                        <img class="heroImg" src="img/spider.png"></div>
-
-                    <div class="back">
-                        <h1>Spiderman</h1>
-                        <p style="color:whitesmoke">The character was created by writer-editor Stan Lee and writer-artist Steve Ditko, and first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books.</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+		<img class="heroImg" src="img/flash.png">
+			<!-- front content -->
+		</div>
+		<div class="back">
+		 <h1>Flash</h1>
+                       <div class="gif">
+                          <img src="https://media.giphy.com/media/wdh1SvEn0E06I/giphy.gif" width="110" height="90"></div>
+                        <p>One of DC Comics' most popular heroes and has been integral to the publisher's many reality-changing "crisis" storylines over the years.</p>
+		</div>
+	</div>
+</div>
     </div>
+
+    <div id="marvel">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+		<img class="heroImg" src="img/strange.png">
+			<!-- front content -->
+		</div>
+		<div class="back">
+		 <h1>Dr. Strange</h1>
+                       <div class="gif">
+                          <img src="https://media.giphy.com/media/TlK63EVy9xUzLnbkptC/giphy.gif" width="110" height="90"></div>
+                        <p>Doctor Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. </p>
+		</div>
+	</div>
+</div>
+
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+		<img class="heroImg" src="img/wolverine.png">
+			<!-- front content -->
+		</div>
+		<div class="back">
+		<h1>Wolverine</h1>
+
+
+<div class="gif">
+    <img src="https://media.giphy.com/media/P9VYiLlZimdpK/giphy.gif" width="110" height="90"></div>
+                        <p>The character appeared in the last panel of The Incredible Hulk #180 before having a larger role in #181 (cover-dated Nov. 1974).</p>
+		</div>
+	</div>
+</div>
+
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+		<img class="heroImg" src="img/spider.png">
+			<!-- front content -->
+		</div>
+		<div class="back">
+		<h1>Spiderman</h1>
+                      <div class="gif">
+                          <img src="https://media.giphy.com/media/3o6vXMmCjD0nzaI8pO/giphy.gif" width="110" height="90"></div>
+                        <p style="color:whitesmoke">The character first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books.</p>
+		</div>
+	</div>
+</div>
+</div>
 
    <div class="grow-element"></div>
 
