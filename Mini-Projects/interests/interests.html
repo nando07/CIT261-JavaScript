@@ -6,580 +6,156 @@
     <title>Document</title>
 
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-        }
-
-        #topSection {
-            margin: 0;
-        }
-
-        #wall {
-            filter: blur(20px);
-        }
-
-        .go-down {
-            position:relative;
-            top: -70px;
-            left: 50%;
-            transform:translate(-50%, 50%);
-/*            border: 4px solid black;*/
-/*            border-radius: 50%;*/
-            width: 90px;
-            height: 100px;
-            text-align: center;
-            line-height: 100px;
-/*            background-color: rgba(0,0,0, 0.8);*/
-            overflow: hidden;
-        }
-
-        .go-down p {
-            position: absolute;
-            top: -50px;
-            left: 14px;
-            text-align: center;
-             color: black;
-            font-family: 'Indie Flower', cursive;
-            font-size: 30px;
-
-        }
-
-
-        .go-down img {
-            width: 70px;
-            position: relative;
-            top: 30px;
-        margin-left: -10px;
-         transform: rotate(-105deg);
-            animation: animate 3s ease-in infinite;
-        }
-
-        @keyframes animate
-        {
-
-            0% {
-
-                transform: translateY(-50px) rotate(-105deg);
-
-            }
-
-             20% {
-
-                transform: translateY(0px) rotate(-105deg);
-
-            }
-
-             40% {
-
-                transform: translateY(0px) rotate(-105deg);
-
-            }
-
-             60% {
-
-                transform: translateY(0px) rotate(-105deg);
-
-            }
-
-             100% {
-
-                transform: translateY(100px) rotate(-105deg);
-
-            }
-        }
-/*
-
-        .go-down:before {
-            text-align: center;
-            content: 'WELCOME';
-
-            position: absolute;
-            left:10px;
-            top: -11px;
-            color: whitesmoke;
-            font-family: 'Indie Flower', cursive;
-            letter-spacing: 3px;
-            font-size: 14px;
-        }
-*/
-
-        #tools {
-            position: relative;
-           width: 100%;
-            border: 1px solid;
-            margin: 0 auto;
-            height: 1000px;
-            text-align: center;
-
-        }
-
-        #topSection img {
-            width: 100%;
-            height: auto;
-        }
-
-        #ruler {
-             margin: auto;
-
-        }
-
-        .grow-element {
-            margin: 80px auto;
-            width: 100px;
-            height: 5px;
-            background-color: black;
-        }
-
-
-       @keyframes america {
-    from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(250px) rotate(360deg);
-           }
-}
-
-        @keyframes asgard {
-            from { transform:  translateX(0px)  rotate(0deg);}
-            to { transform:   translateX(-1200px) rotate(-460deg);}
-        }
-
-         @keyframes wallH {
-            from { transform: rotate(0deg);}
-            to { transform: rotate(-2460deg);}
-        }
-
-
-
-        .weapons {
-            width: 200px;
-        }
-
-        .hammer {
-            position: absolute;
-            top: 400px;
-            right: 0px;
-            animation: asgard 2s linear infinite;
-            animation-direction: alternate;
-        }
-
-        .shield {
-            position: relative;
-            top: 300px;
-            animation: america 4s linear infinite;
-        }
-
-
-
-        #main-container {
-
-            text-align: center;
-            width: 100%;
-            height: auto;
-
-
-        }
-
-
-        #hope {
-            position: relative;
-            width: 100%;
-            height: auto;
-
-            text-align: center;
-        }
-
-
-        #hopeImg {
-            position: relative;
-            width: 916px;
-            height: auto;
-            margin: 0 auto;
-
-
-        }
-
-
-        #leftSm {
-            position: absolute;
-            left: 130px;
-            top: 0;
-        }
-
-
-        #rSm {
-            position: absolute;
-            right: 135px;
-            top: 0;
-        }
-
-        .wallBtn{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform:translate(-50%, 50%);
-            font-family: 'Indie Flower', cursive;
-            font-size: 30px;
-            color: white;
-            text-align: center;
-            border-radius: 20px;
-            background-color: rgba(0,0,0, 0.8);
-            width: 280px;
-            height: 50px;
-            cursor: pointer;
-        }
-
-        #wallHammer{
-             position: absolute;
-            top: 30%;
-            left: 40%;
-/*            transform:translate(-50%, 50%);*/
-        }
-
-        .hopeBtn {
-         font-family: 'Indie Flower', cursive;
-            font-size: 50px;
-            color: white;
-         text-align: center;
-            border-radius: 20px;
-            background-color: #ef0e20;
-            width: 380px;
-            height: 80px;
-            cursor: pointer;
-        }
-
-
-        /* entire container, keeps perspective */
-.flip-container {
-
-	perspective: 1000px;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-
-    display: inline-grid;
-	width: 270px;
-	height: 340px;
-}
-
-/* flip speed goes here */
-.flipper {
-
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-        .front img {
-            padding-top: 70px;
-            padding-left: 55px;
-        }
-/* hide back of pane during swap */
-.front, .back {
-
-/*    text-align: center;*/
-	backface-visibility: hidden;
-    border-radius: 20px;
-     background-color:
-#f3c26a;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-        .front h1, .back h1 {
-            text-align:center;
-            font-family: 'Indie Flower', cursive;
-            padding: 20px;
-        }
-
-        .back p {
-            text-align: justify;
-             padding: 20px;
-        }
-/* front pane, placed above back */
-.front {
-
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-        .back iframe {
-            text-align: center;
-        }
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-    color: white;
-    background-color: black;
-}
-        .gif{
-            margin-top: -20px;
-        }
-
-        .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
-	transform: rotateY(180deg);
-}
-
-        #marvel, #dc {
-            text-align: center;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
     <div id="home">
-
-
-
         <div id="topSection">
-
             <img id="wall" src="img/dcwallpaper.jpg">
-
-
         </div>
-
-         <img id="wallHammer" src="img/thorHammer.png" width="200">
-         <button class="wallBtn" onclick="unblur()">Hammer Power</button>
+        <img id="wallHammer" src="img/thorHammer.png" width="200">
     </div>
-<!--
 
--->
-
-<div class="grow-element"></div>
+   <button class="wallBtn" onclick="unblur()">Hammer Power</button>
+    <div class="grow-element"></div>
 
     <h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE SUPERHEROES</h1>
     <div class="go-down">
+    <img src="img/thorHammer.png">
+    </div>
 
-           <img src="img/thorHammer.png">
-           </div>
 
     <div id="dc">
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <img class="heroImg" src="img/sman.png">
+                    <!-- front content -->
+                </div>
+                <div class="back">
+                    <h1>Superman</h1>
+                    <div class="gif">
+                        <img src="https://media.giphy.com/media/3HSzHiDUtNLhu/giphy.gif" width="110" height="90"></div>
+                    <p>The character was created by writer Jerry Siegel and artist Joe Shuster, high school students living in Cleveland, Ohio, in 1933.</p>
+                    <!-- back content -->
+                </div>
+            </div>
+        </div>
 
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front">
-		<img class="heroImg" src="img/sman.png">
-			<!-- front content -->
-		</div>
-		<div class="back">
-		<h1>Superman</h1>
-                       <div class="gif">
-                          <img src="https://media.giphy.com/media/3HSzHiDUtNLhu/giphy.gif" width="110" height="90"></div>
-                        <p>The character was created by writer Jerry Siegel and artist Joe Shuster, high school students living in Cleveland, Ohio, in 1933.</p>
-			<!-- back content -->
-		</div>
-	</div>
-</div>
-
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front">
-		<img class="heroImg" src="img/greenL.png">
-			<!-- front content -->
-		</div>
-		<div class="back">
-		<h1>Green Lantern</h1>
-                       <div class="gif">
-                          <img src="https://media.giphy.com/media/ezJpm4iktReaQ/giphy.gif" width="110" height="90"></div>
-                        <p>The first Green Lantern character, Alan Scott, was created in 1940 to fight criminals in New York City with the aid of his magic ring.</p>
-		</div>
-	</div>
-</div>
-
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <img class="heroImg" src="img/greenL.png">
+                    <!-- front content -->
+                </div>
+                <div class="back">
+                    <h1>Green Lantern</h1>
+                    <div class="gif">
+                        <img src="https://media.giphy.com/media/ezJpm4iktReaQ/giphy.gif" width="110" height="90"></div>
+                    <p>The first Green Lantern character, Alan Scott, was created in 1940 to fight criminals in New York City with the aid of his magic ring.</p>
+                </div>
+            </div>
+        </div>
 
 
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front">
-		<img class="heroImg" src="img/flash.png">
-			<!-- front content -->
-		</div>
-		<div class="back">
-		 <h1>Flash</h1>
-                       <div class="gif">
-                          <img src="https://media.giphy.com/media/wdh1SvEn0E06I/giphy.gif" width="110" height="90"></div>
-                        <p>One of DC Comics' most popular heroes and has been integral to the publisher's many reality-changing "crisis" storylines over the years.</p>
-		</div>
-	</div>
-</div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <img class="heroImg" src="img/flash.png">
+                    <!-- front content -->
+                </div>
+                <div class="back">
+                    <h1>Flash</h1>
+                    <div class="gif">
+                        <img src="https://media.giphy.com/media/wdh1SvEn0E06I/giphy.gif" width="110" height="90"></div>
+                    <p>One of DC Comics' most popular heroes and has been integral to the publisher's many reality-changing "crisis" storylines over the years.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="marvel">
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front">
-		<img class="heroImg" src="img/strange.png">
-			<!-- front content -->
-		</div>
-		<div class="back">
-		 <h1>Dr. Strange</h1>
-                       <div class="gif">
-                          <img src="https://media.giphy.com/media/TlK63EVy9xUzLnbkptC/giphy.gif" width="110" height="90"></div>
-                        <p>Doctor Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. </p>
-		</div>
-	</div>
-</div>
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <img class="heroImg" src="img/strange.png">
+                    <!-- front content -->
+                </div>
+                <div class="back">
+                    <h1>Dr. Strange</h1>
+                    <div class="gif">
+                        <img src="https://media.giphy.com/media/TlK63EVy9xUzLnbkptC/giphy.gif" width="110" height="90"></div>
+                    <p>Doctor Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. </p>
+                </div>
+            </div>
+        </div>
 
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front">
-		<img class="heroImg" src="img/wolverine.png">
-			<!-- front content -->
-		</div>
-		<div class="back">
-		<h1>Wolverine</h1>
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <img class="heroImg" src="img/wolverine.png">
+                    <!-- front content -->
+                </div>
+                <div class="back">
+                    <h1>Wolverine</h1>
 
 
-<div class="gif">
-    <img src="https://media.giphy.com/media/P9VYiLlZimdpK/giphy.gif" width="110" height="90"></div>
-                        <p>The character appeared in the last panel of The Incredible Hulk #180 before having a larger role in #181 (cover-dated Nov. 1974).</p>
-		</div>
-	</div>
-</div>
+                    <div class="gif">
+                        <img src="https://media.giphy.com/media/P9VYiLlZimdpK/giphy.gif" width="110" height="90"></div>
+                    <p>The character appeared in the last panel of The Incredible Hulk #180 before having a larger role in #181 (cover-dated Nov. 1974).</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front">
-		<img class="heroImg" src="img/spider.png">
-			<!-- front content -->
-		</div>
-		<div class="back">
-		<h1>Spiderman</h1>
-                      <div class="gif">
-                          <img src="https://media.giphy.com/media/3o6vXMmCjD0nzaI8pO/giphy.gif" width="110" height="90"></div>
-                        <p style="color:whitesmoke">The character first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books.</p>
-		</div>
-	</div>
-</div>
-</div>
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <img class="heroImg" src="img/spider.png">
+                    <!-- front content -->
+                </div>
+                <div class="back">
+                    <h1>Spiderman</h1>
+                    <div class="gif">
+                        <img src="https://media.giphy.com/media/3o6vXMmCjD0nzaI8pO/giphy.gif" width="110" height="90"></div>
+                    <p style="color:whitesmoke">The character first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-   <div class="grow-element"></div>
+    <div class="grow-element"></div>
 
 
     <div id="hope">
-       <h1 style="font-family: 'Indie Flower', cursive; text-align: center">IT MEANS HOPE! </h1>
-       <div class="go-down">
+        <h1 style="font-family: 'Indie Flower', cursive; text-align: center">IT MEANS HOPE! </h1>
+        <div class="go-down">
 
-           <img src="img/thorHammer.png">
-           </div>
+            <img src="img/thorHammer.png">
+        </div>
         <div id="hopeImg">
             <img id="leftSm" src="img/smanLeft.jpeg">
             <img id="middleSm" src="img/sman2.jpg">
             <img id="rSm" src="img/smanRight.jpeg">
         </div>
         <br>
-        <button class="hopeBtn" id="toggle"  onclick="toggle()">Show hope!</button>
+        <button class="hopeBtn" id="toggle" onclick="toggle()">Show hope!</button>
 
     </div>
-<div class="grow-element"></div>
+    <div class="grow-element"></div>
     <div id="tools">
-<h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE WEAPONS</h1>
-       <div class="go-down">
+        <h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE WEAPONS</h1>
+        <div class="go-down">
 
-           <img src="img/thorHammer.png">
-           </div>
-        <img class="shield"  src="img/cAShield.png"  width="200">
+            <img src="img/thorHammer.png">
+        </div>
+        <img class="shield" src="img/cAShield.png" width="200">
         <img class="hammer" src="img/thorHammer.png" width="200">
-
     </div>
 
-
-    <script>
-
-        var isBlurred = true;
-        var wall = document.getElementById("wall");
-
-    var hammer = document.getElementById("wallHammer");
-function unblur() {
-
-
-
-    if (isBlurred) {
-    hammer.style.animation = "wallH 3s ease";
-
-//    hammer.style.transform = "rotateY(1080deg)";
-    wall.style.transition = "filter 3s ease";
-    wall.style.filter = "blur(0px)";
-        isBlurred = false;
-
-    } else {
-         hammer.style.animation = "asgard 3s ease";
-    wall.style.transition = "filter 3s ease";
-    wall.style.filter = "blur(20px)";
-        isBlurred = true;
-
-    }
-
-
-}
-
-        function moveLeft(open) {
-            var leftArm = document.getElementById("leftSm");
-
-//            leftArm.style.transition = "left 1s cubic-bezier(0,2,0,0)";
-
-            if (open) {
-                leftArm.style.transition = "left 0.5s cubic-bezier(.01,.96,.93,.07)";
-            leftArm.style.left = "0px";
-
-            } else {
-                leftArm.style.transition = "left 1s ease-out";
-                leftArm.style.left = "130px";
-            }
-        }
-        var e = document.getElementById("toggle");
-        var showingHope = false;
-        function toggle() {
-
-            if (showingHope) {
-            e.innerHTML = "Show hope!";
-                closeChest();
-                showingHope = false
-            } else {
-                e.innerHTML = "Don't show hope";
-                openChest();
-                showingHope = true;
-            }
-
-        }
-
-        function moveRight(open) {
-          var rArm = document.getElementById("rSm");
-
-
-            if (open) {
-                rArm.style.transition = "right 0.5s cubic-bezier(.01,.96,.93,.07)";
-            rArm.style.right = "0px";
-            } else {
-                rArm.style.transition = "right 1s ease-out";
-                rArm.style.right = "130px";
-            }
-        }
-
-        function openChest() {
-            moveRight(true);
-            moveLeft(true);
-        }
-
-        function closeChest() {
-             moveRight(false);
-            moveLeft(false);
-        }
-
-
-    </script>
-
+<script src="script.js"></script>
 </body>
 
 </html>

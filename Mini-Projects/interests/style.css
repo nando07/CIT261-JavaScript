@@ -1,0 +1,293 @@
+        body {
+            margin: 0;
+        }
+
+        #topSection {
+            margin: 0;
+        }
+
+        #wall {
+            filter: blur(20px);
+        }
+
+        .go-down {
+            position: relative;
+            top: -70px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: 90px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            overflow: hidden;
+        }
+
+        .go-down p {
+            position: absolute;
+            top: -50px;
+            left: 14px;
+            text-align: center;
+            color: black;
+            font-family: 'Indie Flower', cursive;
+            font-size: 30px;
+
+        }
+
+
+        .go-down img {
+            width: 70px;
+            position: relative;
+            top: 30px;
+            margin-left: -10px;
+            transform: rotate(-105deg);
+            animation: animate 3s ease-in infinite;
+        }
+
+        @keyframes animate {
+
+            0% {
+
+                transform: translateY(-50px) rotate(-105deg);
+
+            }
+
+            20% {
+
+                transform: translateY(0px) rotate(-105deg);
+
+            }
+
+            40% {
+
+                transform: translateY(0px) rotate(-105deg);
+
+            }
+
+            60% {
+
+                transform: translateY(0px) rotate(-105deg);
+
+            }
+
+            100% {
+
+                transform: translateY(100px) rotate(-105deg);
+
+            }
+        }
+
+        #tools {
+            position: relative;
+            width: 100%;
+            border: 1px solid;
+            margin: 0 auto;
+            height: 1000px;
+            text-align: center;
+
+        }
+
+        #topSection img {
+            width: 100%;
+            height: auto;
+        }
+
+        #ruler {
+            margin: auto;
+        }
+
+        .grow-element {
+            margin: 80px auto;
+            width: 100px;
+            height: 5px;
+            background-color: black;
+        }
+
+
+        @keyframes america {
+            from {
+                transform: rotate(0deg) translateX(250px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(250px) rotate(360deg);
+            }
+        }
+
+        @keyframes asgard {
+            from {
+                transform: translateX(0px) rotate(0deg);
+            }
+            to {
+                transform: translateX(-1200px) rotate(-460deg);
+            }
+        }
+
+        @keyframes wallH {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-2460deg);
+            }
+        }
+
+
+
+        .weapons {
+            width: 200px;
+        }
+
+        .hammer {
+            position: absolute;
+            top: 400px;
+            right: 0px;
+            animation: asgard 2s linear infinite;
+            animation-direction: alternate;
+        }
+
+        .shield {
+            position: relative;
+            top: 300px;
+            animation: america 4s linear infinite;
+        }
+
+        #main-container {
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+
+
+        #hope {
+            position: relative;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+
+        #hopeImg {
+            position: relative;
+            width: 916px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+
+        #leftSm {
+            position: absolute;
+            left: 130px;
+            top: 0;
+        }
+
+
+        #rSm {
+            position: absolute;
+            right: 135px;
+            top: 0;
+        }
+
+        .wallBtn {
+            position: relative;
+            top: -250px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            font-family: 'Indie Flower', cursive;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 280px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        #wallHammer {
+            position: relative;
+            top: -300px;
+            left: 40%;
+        }
+
+        .hopeBtn {
+            font-family: 'Indie Flower', cursive;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            background-color: #ef0e20;
+            width: 380px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card-container:hover .card
+{
+            transform: rotateY(180deg);
+        }
+
+        .card-container,
+        .front,
+        .back {
+
+            display: inline-grid;
+            width: 270px;
+            height: 340px;
+        }
+
+        .card{
+            transition: 0.8s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .front img {
+            padding-top: 70px;
+            padding-left: 55px;
+        }
+
+        .front,
+        .back {
+            backface-visibility: hidden;
+            border-radius: 20px;
+            background-color: #f3c26a;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front h1,
+        .back h1 {
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+            padding: 20px;
+        }
+
+        .back p {
+            text-align: justify;
+            padding: 20px;
+        }
+
+
+        .front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            color: white;
+            background-color: black;
+        }
+
+        .gif {
+            margin-top: -20px;
+        }
+
+        #marvel,
+        #dc {
+            text-align: center;
+        }

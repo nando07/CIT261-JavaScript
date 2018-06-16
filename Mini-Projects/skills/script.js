@@ -47,6 +47,9 @@ function switchVideo() {
     counter++;
     //
 }
+
+
+
 var audioCounter = 0;
 const audioArray = ["audio/theNights.mp3", "audio/Extreme_Ways.mp3", "audio/onTopOfTheWorld.mp3"];
 
@@ -231,7 +234,6 @@ function animate() {
 function resetCanvas() {
     var elmnt = document.getElementById("cSkills");
     elmnt.scrollIntoView();
-    //window.scrollTo(300, 1000);
 }
 
 function scroll() {
