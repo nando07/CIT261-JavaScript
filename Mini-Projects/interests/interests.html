@@ -16,6 +16,95 @@
             margin: 0;
         }
 
+        #wall {
+            filter: blur(20px);
+        }
+
+        .go-down {
+            position:relative;
+            top: -70px;
+            left: 50%;
+            transform:translate(-50%, 50%);
+/*            border: 4px solid black;*/
+/*            border-radius: 50%;*/
+            width: 90px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+/*            background-color: rgba(0,0,0, 0.8);*/
+            overflow: hidden;
+        }
+
+        .go-down p {
+            position: absolute;
+            top: -50px;
+            left: 14px;
+            text-align: center;
+             color: black;
+            font-family: 'Indie Flower', cursive;
+            font-size: 30px;
+
+        }
+
+
+        .go-down img {
+            width: 70px;
+            position: relative;
+            top: 30px;
+        margin-left: -10px;
+         transform: rotate(-105deg);
+            animation: animate 3s ease-in infinite;
+        }
+
+        @keyframes animate
+        {
+
+            0% {
+
+                transform: translateY(-50px) rotate(-105deg);
+
+            }
+
+             20% {
+
+                transform: translateY(0px) rotate(-105deg);
+
+            }
+
+             40% {
+
+                transform: translateY(0px) rotate(-105deg);
+
+            }
+
+             60% {
+
+                transform: translateY(0px) rotate(-105deg);
+
+            }
+
+             100% {
+
+                transform: translateY(100px) rotate(-105deg);
+
+            }
+        }
+/*
+
+        .go-down:before {
+            text-align: center;
+            content: 'WELCOME';
+
+            position: absolute;
+            left:10px;
+            top: -11px;
+            color: whitesmoke;
+            font-family: 'Indie Flower', cursive;
+            letter-spacing: 3px;
+            font-size: 14px;
+        }
+*/
+
         #tools {
             position: relative;
            width: 100%;
@@ -55,6 +144,13 @@
             to { transform:   translateX(-1200px) rotate(-460deg);}
         }
 
+         @keyframes wallH {
+            from { transform: rotate(0deg);}
+            to { transform: rotate(-2460deg);}
+        }
+
+
+
         .weapons {
             width: 200px;
         }
@@ -84,96 +180,6 @@
 
         }
 
-/*
-        .container {
-            margin-left: 50px;
-             margin-bottom: 50px;
-            position: relative;
-            display: inline-grid;
-            padding-left: 10px;
-            padding-top: 20px;
-            width: 250px;
-            height: 320px;
-
-
-        }
-*/
-
-
-/*
-        .cards {
-
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            border: 2px solid whitesmoke;
-            transform-style: preserve-3d;
-            -webkit-transition: all 1s linear;
-            transition: all 1s linear;
-        }
-
-
-        .cards:hover {
-            transform: rotateY(180deg);
-        }
-*/
-
-
-/*
-
-        .front {
-            position: absolute;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            backface-visibility: hidden;
-        }
-
-
-        .back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            backface-visibility: hidden;
-            background: black;
-            text-align: center;
-            transform: rotateY(180deg);
-        }
-
-        .front h1,
-        .back h1 {
-            font-family: 'Indie Flower', cursive;
-            color: whitesmoke;
-            padding: 30px;
-            font-weight: bold;
-            font-size: 24px;
-            text-align: center;
-        }
-
-        .front p,
-        .back p {
-            font-family: 'zilla slab', sans-serif;
-            color: whitesmoke;
-            padding: 30px;
-            font-weight: normal;
-            font-size: 12px;
-            text-align: center;
-        }
-
-        .front img,
-        .back img {
-            font-family: 'zilla slab', sans-serif;
-            padding: 20%;
-            font-weight: normal;
-            font-size: 12px;
-            text-align: center;
-        }
-*/
 
         #hope {
             position: relative;
@@ -205,6 +211,29 @@
             position: absolute;
             right: 135px;
             top: 0;
+        }
+
+        .wallBtn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, 50%);
+            font-family: 'Indie Flower', cursive;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            background-color: rgba(0,0,0, 0.8);
+            width: 280px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        #wallHammer{
+             position: absolute;
+            top: 30%;
+            left: 40%;
+/*            transform:translate(-50%, 50%);*/
         }
 
         .hopeBtn {
@@ -310,15 +339,30 @@
 <body>
 
     <div id="home">
-        <div id="topSection">
-            <img src="img/dcwallpaper.jpg">
-        </div>
-    </div>
 
+
+
+        <div id="topSection">
+
+            <img id="wall" src="img/dcwallpaper.jpg">
+
+
+        </div>
+
+         <img id="wallHammer" src="img/thorHammer.png" width="200">
+         <button class="wallBtn" onclick="unblur()">Hammer Power</button>
+    </div>
+<!--
+
+-->
 
 <div class="grow-element"></div>
 
     <h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE SUPERHEROES</h1>
+    <div class="go-down">
+
+           <img src="img/thorHammer.png">
+           </div>
 
     <div id="dc">
 
@@ -422,8 +466,13 @@
 
    <div class="grow-element"></div>
 
+
     <div id="hope">
        <h1 style="font-family: 'Indie Flower', cursive; text-align: center">IT MEANS HOPE! </h1>
+       <div class="go-down">
+
+           <img src="img/thorHammer.png">
+           </div>
         <div id="hopeImg">
             <img id="leftSm" src="img/smanLeft.jpeg">
             <img id="middleSm" src="img/sman2.jpg">
@@ -436,6 +485,10 @@
 <div class="grow-element"></div>
     <div id="tools">
 <h1 style="font-family: 'Indie Flower', cursive; text-align: center">MY FAVORITE WEAPONS</h1>
+       <div class="go-down">
+
+           <img src="img/thorHammer.png">
+           </div>
         <img class="shield"  src="img/cAShield.png"  width="200">
         <img class="hammer" src="img/thorHammer.png" width="200">
 
@@ -443,6 +496,33 @@
 
 
     <script>
+
+        var isBlurred = true;
+        var wall = document.getElementById("wall");
+
+    var hammer = document.getElementById("wallHammer");
+function unblur() {
+
+
+
+    if (isBlurred) {
+    hammer.style.animation = "wallH 3s ease";
+
+//    hammer.style.transform = "rotateY(1080deg)";
+    wall.style.transition = "filter 3s ease";
+    wall.style.filter = "blur(0px)";
+        isBlurred = false;
+
+    } else {
+         hammer.style.animation = "asgard 3s ease";
+    wall.style.transition = "filter 3s ease";
+    wall.style.filter = "blur(20px)";
+        isBlurred = true;
+
+    }
+
+
+}
 
         function moveLeft(open) {
             var leftArm = document.getElementById("leftSm");
