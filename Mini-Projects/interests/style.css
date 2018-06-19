@@ -48,31 +48,31 @@
         @keyframes animate {
 
             0% {
- -webkit-transform: translateY(-50px) rotate(-105deg);
+                -webkit-transform: translateY(-50px) rotate(-105deg);
                 transform: translateY(-50px) rotate(-105deg);
 
             }
 
             20% {
--webkit-transform: translateY(0px) rotate(-105deg);
+                -webkit-transform: translateY(0px) rotate(-105deg);
                 transform: translateY(0px) rotate(-105deg);
 
             }
 
             40% {
--webkit-transform: translateY(0px) rotate(-105deg);
+                -webkit-transform: translateY(0px) rotate(-105deg);
                 transform: translateY(0px) rotate(-105deg);
 
             }
 
             60% {
--webkit-transform: translateY(0px) rotate(-105deg);
+                -webkit-transform: translateY(0px) rotate(-105deg);
                 transform: translateY(0px) rotate(-105deg);
 
             }
 
             100% {
--webkit-transform: translateY(100px) rotate(-105deg);
+                -webkit-transform: translateY(100px) rotate(-105deg);
                 transform: translateY(100px) rotate(-105deg);
 
             }
@@ -123,18 +123,18 @@
                 transform: translateX(0px) rotate(0deg);
             }
             to {
-                 -webkit-transform: translateX(-1200px) rotate(-460deg);
+                -webkit-transform: translateX(-1200px) rotate(-460deg);
                 transform: translateX(-1200px) rotate(-460deg);
             }
         }
 
         @keyframes wallH {
             from {
-                 -webkit-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
                 transform: rotate(0deg);
             }
             to {
-                 -webkit-transform: rotate(-2460deg);
+                -webkit-transform: rotate(-2460deg);
                 transform: rotate(-2460deg);
             }
         }
@@ -233,10 +233,10 @@
             perspective: 1000px;
         }
 
-.card-container:hover .card, .card-container.hover .card
-{
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+        .card-container:hover .card,
+        .card-container.hover .card {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 
         }
 
@@ -249,10 +249,10 @@
             height: 340px;
         }
 
-        .card{
+        .card {
             -webkit-transition: 0.8s;
             transition: 0.8s;
-              -webkit-transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
             position: relative;
         }
