@@ -40,6 +40,7 @@
             top: 30px;
             margin-left: -10px;
             transform: rotate(-105deg);
+            -webkit-transform: -webkit-rotate(-105deg);
             animation: animate 3s ease-in infinite;
         }
 
@@ -106,6 +107,7 @@
         @keyframes america {
             from {
                 transform: rotate(0deg) translateX(250px) rotate(0deg);
+
             }
             to {
                 transform: rotate(360deg) translateX(250px) rotate(360deg);
@@ -226,7 +228,8 @@
 
         .card-container:hover .card
 {
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform: -webkit-rotateY(180deg);
         }
 
         .card-container,
@@ -275,10 +278,12 @@
         .front {
             z-index: 2;
             transform: rotateY(0deg);
+            -webkit-transform: -webkit-rotateY(0deg);
         }
 
         .back {
             transform: rotateY(180deg);
+            -webkit-transform: -webkit-rotateY(180deg);
             color: white;
             background-color: black;
         }
