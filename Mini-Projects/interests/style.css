@@ -14,6 +14,7 @@
             position: relative;
             top: -70px;
             left: 50%;
+            -webkit-transform: translate(-50%, 50%);
             transform: translate(-50%, 50%);
             width: 90px;
             height: 100px;
@@ -47,31 +48,31 @@
         @keyframes animate {
 
             0% {
-
+ -webkit-transform: translateY(-50px) rotate(-105deg);
                 transform: translateY(-50px) rotate(-105deg);
 
             }
 
             20% {
-
+-webkit-transform: translateY(0px) rotate(-105deg);
                 transform: translateY(0px) rotate(-105deg);
 
             }
 
             40% {
-
+-webkit-transform: translateY(0px) rotate(-105deg);
                 transform: translateY(0px) rotate(-105deg);
 
             }
 
             60% {
-
+-webkit-transform: translateY(0px) rotate(-105deg);
                 transform: translateY(0px) rotate(-105deg);
 
             }
 
             100% {
-
+-webkit-transform: translateY(100px) rotate(-105deg);
                 transform: translateY(100px) rotate(-105deg);
 
             }
@@ -106,28 +107,34 @@
 
         @keyframes america {
             from {
+                -webkit-transform: rotate(0deg) translateX(250px) rotate(0deg);
                 transform: rotate(0deg) translateX(250px) rotate(0deg);
 
             }
             to {
+                -webkit-transform: rotate(360deg) translateX(250px) rotate(360deg);
                 transform: rotate(360deg) translateX(250px) rotate(360deg);
             }
         }
 
         @keyframes asgard {
             from {
+                -webkit-transform: translateX(0px) rotate(0deg);
                 transform: translateX(0px) rotate(0deg);
             }
             to {
+                 -webkit-transform: translateX(-1200px) rotate(-460deg);
                 transform: translateX(-1200px) rotate(-460deg);
             }
         }
 
         @keyframes wallH {
             from {
+                 -webkit-transform: rotate(0deg);
                 transform: rotate(0deg);
             }
             to {
+                 -webkit-transform: rotate(-2460deg);
                 transform: rotate(-2460deg);
             }
         }
@@ -242,7 +249,9 @@
         }
 
         .card{
+            -webkit-transition: 0.8s;
             transition: 0.8s;
+            -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
             position: relative;
         }
