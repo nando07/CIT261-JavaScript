@@ -235,8 +235,9 @@
 
 .card-container:hover .card, .card-container.hover .card
 {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    -webkit-transform: -webkit-rotateY(180deg);
+
         }
 
         .card-container,
