@@ -9,7 +9,14 @@
         margin: 0 auto;
         max-width: 1000px;
     }
+    code {
+        font-size: 15px;
+        font-weight: bold;
+    }
 
+    h2 code {
+        font-size: 22px;
+    }
 
     </style>
 <body>
@@ -41,6 +48,19 @@
     <p>We can add events to control the pressing of a key and its release. The <code>onkeydown</code> will trigger a function to make the red bar grow to the right by pressing the right (&rarr;) arrow key. When the user releases the key, then another event will trigger in which the red bar will grow smaller. This is done with the <code>onkeyup</code> event.</p>
    <div class="container">
   <p data-height="400" data-theme-id="dark" data-slug-hash="QxZLyL" data-default-tab="js,result" data-user="nando2018" data-embed-version="2" data-pen-title="keyUp/keyDown" class="codepen">See the Pen <a href="https://codepen.io/nando2018/pen/QxZLyL/">keyUp/keyDown</a> by nando (<a href="https://codepen.io/nando2018">@nando2018</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    </div>
+
+    <h2>Touch Events</h2>
+    <ul>
+        <li><code>touchstart</code> is fired when a touch point is placed on the touch surface.</li>
+        <li><code>touchmove</code> is fired when a touch point is moved along the touch surface.</li>
+        <li><code>touchend</code> is fired when a touch point is removed from the touch surface.</li>
+        <li><code>touchcancel</code> is fired when a touch point has been disrupted in an implementation-specific manner (for example, too many touch points are created). See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events">mozila.org</a></li>
+    </ul>
+
+    <p>In this case we use <code>touchmove</code> and <code>touchend</code> to trigger the animation of the box changing colors and dimensions. Note - Works only on mobile devices, but mouse events are also activated to simulate the animation on the computer.</p>
+ <div class="container">
+   <p data-height="400" data-theme-id="dark" data-slug-hash="vrVwMv" data-default-tab="js,result" data-user="nando2018" data-embed-version="2" data-pen-title="ontouch Events" class="codepen">See the Pen <a href="https://codepen.io/nando2018/pen/vrVwMv/">ontouch Events</a> by nando (<a href="https://codepen.io/nando2018">@nando2018</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     </div>
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
