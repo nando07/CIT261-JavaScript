@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked {
+            color: black;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        #star {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #star1,
+        #star2,
+        #star3,
+        #star4,
+        #star5 {
+            background-color: transparent;
+            color: darkgray;
+            -webkit-transition: color .5s, -webkit-transform .5s;
+            /* Safari */
+            transition: color .8s, transform .8s;
+
+        }
+
+        #star1:hover,
+        #star2:hover,
+        #star3:hover,
+        #star4:hover,
+        #star5:hover {
+            color: orange;
+            -webkit-transform: rotate(145deg);
+            /* Safari */
+            transform: rotate(145deg) scale(1.5);
+
+        }
+
+
+        #rating {
+            margin: 0 auto;
+            max-width: 500px;
+            display: inline-flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="star">
+        <h1>What's the Rating?</h1>
+        <div id="rating">
+            <div id="star1" onmousedown="mouseDown(this.id)">
+                <span class="fa fa-star fa-5x"></span>
+            </div>
+            <div id="star2" onmousedown="mouseDown(this.id)">
+                <span class="fa fa-star fa-5x"></span>
+            </div>
+            <div id="star3" onmousedown="mouseDown(this.id)">
+                <span class="fa fa-star fa-5x"></span>
+            </div>
+            <div id="star4" onmousedown="mouseDown(this.id)">
+                <span class="fa fa-star fa-5x"></span>
+            </div>
+            <div id="star5" onmousedown="mouseDown(this.id)">
+                <span class="fa fa-star fa-5x"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    var star1 = document.getElementById("star1").style;
+    var star2 = document.getElementById("star2").style;
+    var star3 = document.getElementById("star3").style;
+    var star4 = document.getElementById("star4").style;
+    var star5 = document.getElementById("star5").style;
+
+    function mouseDown(id) {
+        var star = document.getElementById(id).style;
+        switch (id) {
+            case "star1":
+                if (star.color == "orange") {
+                    star.color = "darkgray";
+                    star2.color = "darkgray";
+                    star3.color = "darkgray";
+                    star4.color = "darkgray";
+                    star5.color = "darkgray";
+
+                } else {
+                    star.color = "orange";
+                }
+                break;
+            case "star2":
+                if (star.color == "orange") {
+
+                    star3.color = "darkgray";
+                    star4.color = "darkgray";
+                    star5.color = "darkgray";
+
+                } else {
+                    star.color = "orange";
+                    star1.color = "orange";
+                }
+                break;
+            case "star3":
+                if (star.color == "orange") {
+                    star4.color = "darkgray";
+                    star5.color = "darkgray";
+
+                } else {
+                    star.color = "orange";
+                    star1.color = "orange";
+                    star2.color = "orange";
+                }
+
+                break;
+            case "star4":
+                if (star.color == "orange") {
+                    star5.color = "darkgray";
+
+                } else {
+                    star.color = "orange";
+                    star1.color = "orange";
+                    star2.color = "orange";
+                    star3.color = "orange";
+                }
+                break;
+            case "star5":
+                if (star.color == "orange") {
+                    star.color = "darkgray";
+
+                } else {
+                    star.color = "orange";
+                    star1.color = "orange";
+                    star2.color = "orange";
+                    star3.color = "orange";
+                    star4.color = "orange";
+                }
+                break;
+            default:
+        }
+
+    }
+</script>
+
+</html>
